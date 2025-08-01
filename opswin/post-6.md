@@ -6,7 +6,7 @@ date: 2025-07-24
 author: xiaobin
 tags: ["faq2", "Visual Studio Online"]
 ---
-- [Old version(4.6.2) Fx](https://aka.ms/vs/16/release/vs_Community.exe)
+- [Old version Fx - vs2015](https://tdtc-hrb.github.io/ops-win/posts/post-11)
 - [VC](https://aka.ms/vs/17/release/vs_Community.exe)
 
 ## [down options](https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools)

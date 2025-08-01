@@ -20,3 +20,6 @@ There are two ways to install VS2015:
 also see: [network proxy](https://tdtc-hrb.github.io/csdn/post/ops_network_proxy)
 - Physical disconnection
 > 拔掉网线或不连接WIFI网络
+
+### v4.6
+Mainly provides support for [SQLite v1.0.112](https://system.data.sqlite.org/home/doc/trunk/www/downloads.wiki)
