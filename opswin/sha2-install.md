@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Using .NET Framework 3.5 on Windows 8 and above"
-description: "Using the Windows DVD"
+title: "Deploy .net framework 4.7.2/4.8 on win7"
+description: "How to Install SHA-2 Code Signing Support Updates"
 date: 2025-08-06
 author: xiaobin
 tags: [".NET Framework 4.7.2", ".NET Framework 4.8", "SHA-2"]
