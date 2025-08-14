@@ -1,13 +1,14 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Visual Studio 2017 及以上版本的在线下载"
+title: "Visual Studio 2019+的在线下载"
 description: "down format and Common"
-date: 2025-07-24
+date: 2025-08-14
 author: xiaobin
 tags: ["faq2", "Visual Studio Online"]
 ---
-- [Old version Fx - vs2015](https://tdtc-hrb.github.io/ops-win/posts/post-11)
-- [VC](https://aka.ms/vs/17/release/vs_Community.exe)
+- [Old version Fx - v4.6](https://tdtc-hrb.github.io/ops-win/posts/post-11)
+
+Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
 
 ## [down options](https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools)
 exec:
