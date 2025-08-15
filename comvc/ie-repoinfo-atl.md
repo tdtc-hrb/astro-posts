@@ -5,6 +5,8 @@ description: "使用IE"
 date: 2025-01-19
 author: "tdtc"
 ---
+Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
+
 > - replace(regexp/substr,replacement)
 > 使用这个函数来替换多余的空格。
 ```js

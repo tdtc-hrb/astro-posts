@@ -5,6 +5,8 @@ description: "SafeArrayCreateVector()"
 date: 2025-01-19
 author: "tdtc"
 ---
+Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
+
 !!! 除了IE的ActiveX项目，不推荐ATL !!!    
 !!! ATL is not recommended except for IE ActiveX projects. !!!
 
