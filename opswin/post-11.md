@@ -1,22 +1,48 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Visual Studio 2015"
-description: "离线安装包"
-date: 2025-02-08
+title: ".net framework 4.6"
+description: "SQLite v1.0.112"
+date: 2025-08-18
 author: xiaobin
-tags: ["faq5", "javascript_projectsystem.msi", "Physical disconnection"]
+tags: ["faq5"]
 ---
-File Info:
+- [vs16](https://aka.ms/vs/16/release/vs_Community.exe)
+- [SQLite v1.0.112](https://system.data.sqlite.org/home/doc/trunk/www/downloads.wiki)
+
+### Core Editor
 ```
-en_visual_studio_community_2015_with_update_3_x86_x64_dvd_8923300.iso
-SHA1: C838DF0D2DAD6E763DF5A7974F5FFCD45B98FD0E
-size: 7.09GB
-date: 2016-06-27
-ed2k://|file|en_visual_studio_community_2015_with_update_3_x86_x64_dvd_8923300.iso|7617847296|AC962389EB54AF93431568804CB10875|/
+--add Microsoft.VisualStudio.Component.CoreEditor `
+--add Microsoft.VisualStudio.Workload.CoreEditor `
 ```
 
-There are two ways to install VS2015:
-- [visual studio 2015 javascript_projectsystem](https://stackoverflow.com/a/39130542)    
-also see: [network proxy](https://tdtc-hrb.github.io/csdn/post/ops_network_proxy)
-- Physical disconnection
-> 拔掉网线或不连接WIFI网络
+### .NET development tools
+```
+--add Microsoft.VisualStudio.Component.NuGet `
+--add Microsoft.Net.Component.4.6.1.TargetingPack `
+--add Microsoft.VisualStudio.Component.Roslyn.Compiler `
+--add Microsoft.VisualStudio.Component.Roslyn.LanguageServices `
+--add Microsoft.VisualStudio.Component.FSharp `
+--add Microsoft.ComponentGroup.ClickOnce.Publish `
+--add Microsoft.NetCore.Component.DevelopmentTools `
+--add Microsoft.Net.Component.4.8.SDK `
+--add Microsoft.Net.Component.4.7.2.TargetingPack `
+--add Microsoft.Net.ComponentGroup.DevelopmentPrerequisites `
+--add Microsoft.Component.MSBuild `
+--add Microsoft.VisualStudio.Component.TextTemplating `
+--add Microsoft.VisualStudio.Component.SQL.CLR `
+--add Microsoft.VisualStudio.Component.ManagedDesktop.Core `
+```
+### .NET framework 4 - 4.6 development tools
+```
+--add Microsoft.Net.Component.4.5.2.TargetingPack `
+--add Microsoft.Net.Component.4.5.TargetingPack `
+--add Microsoft.Net.Component.4.TargetingPack `
+--add Microsoft.Net.Component.4.5.1.TargetingPack `
+--add Microsoft.Net.Component.4.6.TargetingPack `
+--add Microsoft.Net.ComponentGroup.TargetingPacks.Common `
+```
+### Managed Desktop
+```
+--add Microsoft.VisualStudio.Component.ManagedDesktop.Prerequisites `
+--add Microsoft.VisualStudio.Workload.ManagedDesktop"
+```

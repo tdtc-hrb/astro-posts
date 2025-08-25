@@ -1,38 +1,31 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Microsoft Visual C++ 及 Windows SDK"
-description: "After vs2022 17.12, the main productivity for VC"
-date: 2025-02-24
+title: "Desktop development with C++"
+description: "Use offline or online installation"
+date: 2025-08-24
 author: xiaobin
-tags: ["faq2", "Microsoft Visual C++", "Windows SDK"]
+tags: ["Microsoft Visual C++"]
 ---
-These options are available in [Visual Studio 在线](https://tdtc-hrb.github.io/ops-win/posts/post-6)
 
-## VC
+### offline
 ```
+.\VisualStudioSetup.exe --layout D:\v17.14 `
+--add Microsoft.VisualStudio.Component.CoreEditor `
+--add Microsoft.VisualStudio.Workload.CoreEditor `
+--add Microsoft.VisualStudio.Component.Roslyn.Compiler `
+--add Microsoft.VisualStudio.Component.TextTemplating `
+--add Microsoft.Component.MSBuild `
 --add Microsoft.VisualStudio.Component.VC.CoreIde `
 --add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
 --add Microsoft.VisualStudio.Component.VC.Redist.14.Latest `
-```
-
-### [Windows SDK](https://learn.microsoft.com/en-us/visualstudio/install/workload-component-id-vs-build-tools)
-- win10
-```
---add Microsoft.VisualStudio.Component.Windows10SDK.19041 `
-```
-- win11
-```
---add Microsoft.VisualStudio.Component.Windows11SDK.26100 `
-```
-
-### ATL
-```
 --add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core `
---add Microsoft.VisualStudio.Component.VC.ATL `
 --add Microsoft.VisualStudio.Workload.NativeDesktop `
+--add Microsoft.VisualStudio.Component.Windows10SDK.19041 `
+--lang en-US
 ```
 
-## MFC
-```
---add Microsoft.VisualStudio.Component.VC.ATLMFC `
-```
+### [online](https://visualstudio.microsoft.com/vs/community)
+optional: 
+- MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
+- vcpkg package manager
+- Windows 10 SDK(10.0.19041.0)

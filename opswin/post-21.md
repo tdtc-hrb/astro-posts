@@ -1,25 +1,59 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Clang/LLVM support in Visual Studio"
-description: "Visual Studio 2019(v16.7) 及以上版本"
-date: 2025-02-24
+title: "latest Clang for VSCode"
+description: "Standalone Cmake and Clang in VS Code"
+date: 2025-08-24
 author: xiaobin
 tags: ["faq2", "Microsoft Visual C++", "Clang"]
 ---
-- [Visual Studio 2019 16.7 or later](https://clang.llvm.org/get_started.html)
-- [Visual Studio 在线](https://tdtc-hrb.github.io/ops-win/posts/post-6)
+- [clang](https://github.com/llvm/llvm-project/releases)
+- [cmake](https://github.com/Kitware/CMake/releases)    
+[Visual Studio 2022 will require CMake Version 3.21 or later](https://llvm.org/docs/GettingStartedVS.html)
+- [ninja-build](https://github.com/ninja-build/ninja/releases)
+- Visual Studio Code - CMake-tools plugin
 
-### [Clang/LLVM support in Visual Studio](https://learn.microsoft.com/en-us/cpp/build/clang-support-msbuild)
-- C++ Clang tools for Windows
+### [MSVC](https://tdtc-hrb.github.io/ops-win/posts/post-20)
+Individual components:
+- MSBuild support for LLVM(clang-cl) toolset
+- Windows Universal C Runtime
+
+About: [clang-cl](https://clang.llvm.org/docs/UsersManual.html#clang-cl) is an alternative command-line interface to Clang, 
+designed for compatibility with the Visual C++ compiler, cl.exe.
+
+## project
+├── Circular.cpp    
+├── Circular.h    
+├── testCir2.cpp    
+├── CMakeLists.txt
+
+### src
+- [source files](https://tdtc-hrb.github.io/csdn/post/c-console_app)
+- [CMakeLists.txt](https://github.com/microsoft/vscode-cmake-tools/issues/2391)
 ```
-Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Llvm.Clang
+cmake_minimum_required(VERSION 3.23)
+project(mytest CXX)
+add_executable(testCir2 testCir2.cpp Circular.cpp)
 ```
-includes:
-- C++ Clang Compiler for Windows
+### build
+- Open the Command Palette (Ctrl+Shift+P) and run
 ```
-Microsoft.VisualStudio.Component.VC.Llvm.Clang
+CMake: Select a Kit
 ```
-- C++ Clang-cl for v143 build tools (x64/x86)
+- Select the compiler you want to use.
 ```
-Microsoft.VisualStudio.Component.VC.Llvm.ClangToolset
+Clang-cl <version> x86_64-pc-windows-msvc
 ```
+These names are stored in "cmake-tools-kits.json"
+```
+%USERPROFILE%\AppData\Local\CMakeTools
+```
+- Build all projects
+right click "CMakeLists.txt",
+```
+Build all projects
+```
+
+## Ref
+- [Getting Started: Building and Running Clang](https://clang.llvm.org/get_started.html)
+- [Get started with CMake Tools on Linux](https://code.visualstudio.com/docs/cpp/cmake-linux)
+- [How do I install latest Clang for VSCode? ](https://www.reddit.com/r/cpp_questions/comments/1j6fcjg/how_do_i_install_latest_clang_for_vscode_on/?rdt=60458)

@@ -5,6 +5,7 @@ description: "MFC"
 date: 2024-09-23
 author: "tdtc"
 ---
+Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
 
 <!-- Program on Windows XP - 1: https://gitee.com/xiaobin80/csdn/raw/master/images/20150118233218968.png -->
 ![Program on Windows 8.1 - UI1](https://github.com/tdtc-hrb/csdn/raw/master/images/prog81-0.png)

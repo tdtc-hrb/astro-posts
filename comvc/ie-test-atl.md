@@ -5,6 +5,8 @@ description: "IE6 ~ IE11"
 date: 2025-01-19
 author: "tdtc"
 ---
+Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
+
 - Target    
   x86
 
