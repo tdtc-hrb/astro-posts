@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "latest Clang for VSCode"
+title: "Latest Clang for VSCode"
 description: "Standalone Cmake and Clang in VS Code"
-date: 2025-08-24
+date: 2025-09-21
 author: xiaobin
 tags: ["faq2", "Microsoft Visual C++", "Clang"]
 ---
@@ -12,13 +12,15 @@ tags: ["faq2", "Microsoft Visual C++", "Clang"]
 - [ninja-build](https://github.com/ninja-build/ninja/releases)
 - Visual Studio Code - CMake-tools plugin
 
-### [MSVC](https://tdtc-hrb.github.io/ops-win/posts/post-20)
-Individual components:
-- MSBuild support for LLVM(clang-cl) toolset
-- Windows Universal C Runtime
+### [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B)
+- VS2015+
 
 About: [clang-cl](https://clang.llvm.org/docs/UsersManual.html#clang-cl) is an alternative command-line interface to Clang, 
 designed for compatibility with the Visual C++ compiler, cl.exe.
+
+#### [v14.1+](https://tdtc-hrb.github.io/ops-win/posts/vc-win)
+Individual components:
+- Windows Universal C Runtime
 
 ## project
 ├── Circular.cpp    

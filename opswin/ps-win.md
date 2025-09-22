@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "PowerShell"
 description: "执行本地ps1脚本"
-date: 2024-11-30
+date: 2025-08-30
 author: xiaobin
 tags: ["faq4", "Set-ExecutionPolicy", "offline Chrome", "MS Edge"]
 ---
@@ -31,9 +31,10 @@ Set-ExecutionPolicy -ExecutionPolicy <PolicyName> -Scope <scope>
 - Undefined
 - Unrestricted
 
-## Google Chrome
-- [How to Download Older Version of Google Chrome](https://squirrelistic.com/blog/how_to_download_older_version_of_google_chrome)
-
-### MS-Edge
-Regardless of Microsoft’s reasoning, you now know how to toggle the sidebar on or off in Edge 119. 
-Just head to Settings > Sidebar > Copilot > Always Show Sidebar. Alternatively, you can use the Ctrl + Shift + / shortcut.
+### [win server](https://community.spiceworks.com/t/gui-instalation-for-windows-2012-server-with-cli/1010685)
+```
+powershell (enter PowerShell prompt)
+mkdir c:\mount
+dism /mount-wim /wimfile:d:\sources\install.wim /index:4 /mountdir:c:\mount /readonly
+install-windowsfeature server-gui-mgmt-infra,server-gui-shell –restart –source c:\mount\windows\winsxs
+```
