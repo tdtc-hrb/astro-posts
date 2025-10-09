@@ -2,12 +2,21 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Desktop development with C++"
 description: "Use offline or online installation"
-date: 2025-09-30
+date: 2025-10-09
 author: xiaobin
 tags: ["Microsoft Visual C++"]
 ---
+Note: Use Windows 10/11 from the Long-Term Servicing Channel (LTSC).
 
-### offline
+Win10 must be at least version 1809.    
+Win11 must be at least version 24H2.
+
+- [Visual Studio 2017](https://learn.microsoft.com/en-us/visualstudio/releases/2017/vs2017-system-requirements-vs)
+- [Visual Studio 2019](https://learn.microsoft.com/en-us/visualstudio/releases/2019/system-requirements)
+- [Visual Studio 2022](https://learn.microsoft.com/en-us/visualstudio/releases/2022/system-requirements)
+- [Visual Studio 2026](https://learn.microsoft.com/en-us/visualstudio/releases/vs18/vs-system-requirements)
+
+## offline
 - vs17/vs16
 ```
 .\vs_community.exe --layout D:\v17v16 `
@@ -25,7 +34,7 @@ tags: ["Microsoft Visual C++"]
 --lang en-US
 ```
 
-#### vs15
+### vs15
 ```
 .\vs_community.exe --layout D:\v15 `
 --add Microsoft.VisualStudio.Component.CoreEditor `
