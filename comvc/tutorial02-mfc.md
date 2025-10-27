@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Custom resources - MFC"
 description: "Add or remove tool buttons and menus; Add dialog boxes;"
-date: 2025-10-26
+date: 2025-10-27
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -14,21 +14,49 @@ Remove "New" from the menu.
 
 
 ### tool button
-Remove the print button from the toolbar;
+Remove the print and new button from the toolbar;
 
-#### icon
 - In the toolbar, right-click the Print icon and select "Delete".
 - In the toolbar, right-click the New icon and select "Delete".
 - In the toolbar, Drag icons to fill the empty buttons.
 
-#### rc
-at 
+![The effect after dragging](https://github.com/tdtc-hrb/csdn/raw/master/images/MFCApplication1.rc-after_drag.png)
+
+Note:    
+必须保证图标是一个挨一个的排列。
+
+#### rc(part)
+使用Notepad++, 修改*.rc
 ```
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
 IDR_MAINFRAME TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_APP_ABOUT
+END
 ```
-removed:
-- BUTTON      ID_FILE_NEW
-- BUTTON      ID_FILE_PRINT
+保存后，Visual Studio 会弹出对话框: 
+```
+This file has been modified outside of Microsoft Visual Studio. 
+Do you want to reload it?
+```
+点击"yes".
+
+再次打开Toolbar下的IDR_MAINFRAME 会弹出对话框: 
+```
+The bitmap for this toolbar must be adjusted to use this size.
+Adjust the bitmap to fit?
+```
+点击"OK".
 
 ### dialog
 In the dialog:
