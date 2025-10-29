@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Custom resources - MFC"
 description: "Add or remove tool buttons and menus; Add dialog boxes;"
-date: 2025-10-27
+date: 2025-10-28
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -68,7 +68,7 @@ Add Resource ->
 
 Right-click the dialog box， Add MFC Class：
 - class name: CConfigDlg
-- bass class: CDialog
+- bass class: CDialog/CDialogEx
 - .h file: ConfigDlg.h
 - .cpp file: ConfigDlg.cpp
 
