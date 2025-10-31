@@ -32,7 +32,7 @@ In the main form's button event.
 ```
 #include "ConfigDlg.h"
 ```
-- call it
+- [call it](https://www.functionx.com/visualc/howto/calldlgfromsdi.htm)
 ```
 CConfigDlg* dlg = new CConfigDlg(this);
 dlg->DoModal();

@@ -2,11 +2,11 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "The File Dialog - MFC"
 description: "Save as a file with a specific extension"
-date: 2025-10-30
+date: 2025-10-31
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-Use the [CFileDialog](https://learn.microsoft.com/en-us/cpp/mfc/reference/cfiledialog-class) to customize the file extension, title, and initial directory.
+Use the [CFileDialog](https://learn.microsoft.com/en-us/cpp/mfc/reference/cfiledialog-class?view=msvc-170#cfiledialog) to customize the file extension, title, and initial directory.
 ```
 explicit CFileDialog(
     BOOL bOpenFileDialog,
@@ -80,3 +80,4 @@ The path of the filename includes the file's title plus the entire directory pat
 
 ## Ref
 - [The File Dialog](https://www.functionx.com/visualc/controls/filedialog.htm)
+- [MFC File Processing: The File Dialog Box](https://www.functionx.com/visualc/fileprocessing/dlgfile.htm)
