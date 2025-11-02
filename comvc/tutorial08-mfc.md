@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "GetDlgItem"
+title: "GetDlgItem - Cwnd"
 description: "Retrieves a pointer to the specified control or child window in a dialog box or other window."
 date: 2025-11-02
 author: xiaobin
