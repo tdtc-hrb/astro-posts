@@ -92,4 +92,4 @@ Add event handlers to the main dialog box.
 ## Ref
 - [Fundamentals of Serialization](https://www.functionx.com/visualc/fileprocessing/serialization.htm)
 - [Serialization class](https://tdtc-hrb.github.io/com-vc/posts/tutorial12-mfc)
-- [CollSerialDemo.zip](https://pan.baidu.com/s/1MeApGeDsKPq6FTEPzbysNg?pwd=0qdp)
+- [CollSerialDemo.zip](https://mega.nz/file/aQE3FQpY#JarPutLeKjGr-Q66wqgkKEL7CGpCrMSLMa-DOBzlZao)

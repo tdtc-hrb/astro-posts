@@ -40,5 +40,5 @@ The project requires the following articles:
         OnBnClickedButton1();
     }
 ```
-- [ObjArraySerialDemo.zip](https://pan.baidu.com/s/1U3j5izzjRN_l6svOd4JGOA?pwd=4iiu)
-> This is an addition based on the CollSerialDemo.zip.
+- [ObjArraySerialDemo.zip](https://mega.nz/file/TY8jhJJT#dV19QLuCJHlKpuGAYInCziVp_pHo5_szLOZr2YUuKFY)
+> This is an addition based on the [CollSerialDemo.zip](https://mega.nz/file/aQE3FQpY#JarPutLeKjGr-Q66wqgkKEL7CGpCrMSLMa-DOBzlZao).

@@ -82,4 +82,4 @@ error C2664: 'void DDX_Control(CDataExchange *,int,CWnd &)' : cannot convert arg
 
 ## Ref
 - [List Box](https://www.functionx.com/visualc/controls/listbox.htm)
-- [addVarDemo.zip](https://pan.baidu.com/s/1sO5618ITrjZXhKtI_6czLA?pwd=udhv)
+- [addVarDemo.zip](https://mega.nz/file/SZ0SVTiA#013V7bSmIZ9zaOm8MjREH3cqtxF1QCozj2kRJ75xd94)

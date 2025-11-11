@@ -49,7 +49,7 @@ Add the following between
     m_wndTab.AddTab(&m_wnd2, _T("Two"), 0, FALSE);
 ```
 
-- src: [CMFCTabCtrlDemo.zip - vs2013](https://pan.baidu.com/s/1atdSf2hi9E6cJP8QMOjnCA?pwd=vlxr)
+- src: [CMFCTabCtrlDemo.zip - vs2013](https://mega.nz/file/7BN0WD4R#zDxossI9goWoMRFNjaT7LLr_cAOqFufVRLY_5XgkvyM)
 
 ## Ref
 - [CMFCTabCtrl not visible in CDialog](https://stackoverflow.com/questions/16455701/cmfctabctrl-not-visible-in-cdialog)
