@@ -22,6 +22,10 @@ Smalltalk's version of document/view is called model-view-controller(MVC)(where 
 MVC architecture has a controller(kind of like CDocTemplate in MFC) that acts like a shield between the document 
 and the view so that they do not get too dependent on each other.
 
+### class diagram
+![MFC-based single document](https://img2024.cnblogs.com/blog/359743/202511/359743-20251113074448677-1824750991.png)
+Image source: Beginning Visual C++ 2013
+
 ## project
 ```
 name: SdiSquares
