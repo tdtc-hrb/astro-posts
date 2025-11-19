@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "Document/View Wizard"
+title: "Create a single-document project using the MFC App Wizard in VC++ 5.0/6.0"
 description: "Using VC 5.0/6.0"
 date: 2025-11-18
 author: xiaobin
@@ -23,13 +23,14 @@ MVC architecture has a controller(kind of like CDocTemplate in MFC) that acts li
 and the view so that they do not get too dependent on each other.
 
 ### class diagram
-![MFC-based single document](https://img2024.cnblogs.com/blog/359743/202511/359743-20251113074448677-1824750991.png)
+![Figure 12-3](https://github.com/tdtc-hrb/csdn/raw/master/images/figure12.3-vc12.png)
 Image source: Beginning Visual C++ 2013
 
 ## project
 ```
 name: SdiSquares
-vc56: vc5 and vc6
+vc56: Images compatible with both VC 5.0 and VC 6.0
+vc5/6: The left side is VC 5.0; the right side is VC 6.0.
 ```
 ![new project - vc6.0](https://github.com/tdtc-hrb/csdn/raw/master/images/new_project-vc6.png)
 
@@ -71,3 +72,4 @@ SquaresView
 
 ## Ref
 - Chapter 7: MFC's Document/View Architecture - MFC Internals
+- [Create a single-document project using the MFC App Wizard in VC++ 12.0 (Visual Studio 2013)](https://www.cnblogs.com/xiaobin-hlj80/p/19191031)
