@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Custom resources - MFC"
 description: "Add or remove tool buttons and menus; Add dialog boxes;"
-date: 2025-10-28
+date: 2025-11-20
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -57,6 +57,12 @@ The bitmap for this toolbar must be adjusted to use this size.
 Adjust the bitmap to fit?
 ```
 点击"OK".
+
+最后, 
+```
+File -> Save<ProjectName>.rc, 
+```
+保存图片。
 
 ### dialog
 In the dialog:
