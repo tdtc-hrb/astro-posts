@@ -57,3 +57,4 @@ END_MESSAGE_MAP()
 
 ## Ref
 - [MFC samples - General](https://learn.microsoft.com/en-us/cpp/overview/visual-cpp-samples?view=msvc-170#mfc-samples---general)
+- [hellomfc2.zip demo](https://mega.nz/file/fEN20B7I#hBoKIkr-MV-WzLLtezv1WvzqbNGPByM67QLo7f1jU6o)
