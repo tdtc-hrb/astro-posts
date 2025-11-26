@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "The List Control - MFC Controls"
 description: "Report View"
-date: 2025-11-10
+date: 2025-11-27
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -24,6 +24,29 @@ void CMFCApplication1Dlg::FormatColumns()
 }
 ```
 
+#### LV_COLUMN
+```
+void CMFCApplication1Dlg::FormatColumns()
+{
+    LV_COLUMN lvc;
+
+    WCHAR *colLab[5] =
+    {
+        _T("Server"), _T("Database"), _T("User"), _T("Password"), _T("Type")
+    };
+
+    lvc.mask = LVCF_FMT | LVCF_WIDTH | LVCF_TEXT | LVCF_SUBITEM;
+
+    for (int i = 0; i < 5; i++) {
+        lvc.iSubItem = i;
+        lvc.pszText = colLab[i];
+        lvc.cx = 80;
+        lvc.fmt = LVCFMT_LEFT;
+        m_ListOfDb.InsertColumn(i, &lvc);
+    }
+}
+```
+reference ["RowList"](https://learn.microsoft.com/en-us/cpp/overview/visual-cpp-samples?view=msvc-170#mfc-samples---general)
 ### row
 ```
 void CMFCApplication1Dlg::SetGridView()
