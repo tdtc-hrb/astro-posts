@@ -8,17 +8,14 @@ tags: ["Microsoft Foundation Class"]
 ---
 MFC supports two types of splitter windows: static and dynamic. 
 
-For an example of an application that uses a static splitter, look no further than the Windows Explorer. 
-Explorer's main window is divided in half vertically by a static splitter window.
-
-
+### splitter window - dynamic
 Dynamic splitter windows are created with MFC's CSplitterWnd::Create function. 
 Creating and initializing a dynamic splitter window is a simple two-step procedure: 
 1. Add a CSplitterWnd data member to the frame window class. 
 2. Override the frame window's virtual OnCreateClient function, 
 and call CSplitterWnd::Create to create a dynamic splitter window in the frame window's client area.
 
-
+### splitter window - static
 The procedure for adding a static splitter window to a frame window goes like this.
 1. Add a CSplitterWnd data member to the frame window class.
 2. Override the frame window's OnCreateClient function, and call CSplitterWnd::CreateStatic to create a static splitter window.
