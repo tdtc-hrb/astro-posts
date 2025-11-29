@@ -6,7 +6,7 @@ date: 2025-11-30
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-down demo: https://mega.nz/file/edVljICZ#Bpz4XhtgJCKdiKBhj_FSZMY8zYLdyOp5n4ZJX_xWbqM
+- down [demo](https://mega.nz/file/add2yJiQ#ck95Pj0--sHxw3IJ-azu--SpMDSIguMzzB8xiBZ_k8g)
 
 ### MFC App Wizard
 MyExplorer
