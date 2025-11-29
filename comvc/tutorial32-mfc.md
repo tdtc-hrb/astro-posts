@@ -70,7 +70,7 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
 
     // add the first splitter pane - the default view in column 0
     if (!m_wndSplitter.CreateView(0, 0,
-        pContext->m_pNewViewClass, CSize(100, 100), pContext))
+        RUNTIME_CLASS(CLeftView), CSize(100, 100), pContext))
     {
         TRACE0("Failed to create first pane\n");
         return FALSE;
