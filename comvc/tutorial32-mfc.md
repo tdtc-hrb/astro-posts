@@ -6,7 +6,7 @@ date: 2025-11-30
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-- down [demo](https://mega.nz/file/add2yJiQ#ck95Pj0--sHxw3IJ-azu--SpMDSIguMzzB8xiBZ_k8g)
+You need to add implementation code to OnCreateClient() in MainFrm.
 
 ### MFC App Wizard
 MyExplorer
@@ -25,25 +25,45 @@ CDetailView:
 ![add MFC Class](https://github.com/tdtc-hrb/csdn/raw/master/images/add_class1-myexplorer.png)
 
 ![add MFC Class](https://github.com/tdtc-hrb/csdn/raw/master/images/add_class2-myexplorer.png)
-### Declare
-- MainFrame.h
-```
-// Attributes
-protected:
-    CSplitterWnd m_wndSplitter;
-    CSplitterWnd m_wndSplitter2; // The splitter variable in the second column
-```
 
-### OnCreateClient
+## OnCreateClient
+- [Three-way](https://mega.nz/file/add2yJiQ#ck95Pj0--sHxw3IJ-azu--SpMDSIguMzzB8xiBZ_k8g)
 ```
-/////////////////////////////////////////////////////////////////////////////
-// The left view is the first pane, and there are two output views
-
 //                           |  List View (CMyExplorerView)
 //    Tree View (CLeftView)  |-----------------------------
 //                           |  Scroll View (CDetailView)
 ```
-- MainFrame.cpp
+
+- fourth-way
+```
+//    Tree View (CLeftView)  |  List View (CMyExplorerView)
+// ------------------------  |-----------------------------
+//    Edit View (CEditView)  |  Scroll View (CDetailView)
+```
+
+### fourth-way
+- Add a new View class: CTextView derived from CEditView
+- Add a new Splitter
+```
+// Attributes
+protected:
+    CSplitterWnd m_wndSplitter;
+    CSplitterWnd m_wndSplitter1; // The splitter variable in the first column
+    CSplitterWnd m_wndSplitter2; // The splitter variable in the second column
+```
+- Set the initial value for row 0 or column 0
+
+#### column 0
+```
+m_wndSplitter.SetColumnInfo(0, 100, 50);
+```
+
+#### row 0
+```
+m_wndSplitter2.SetRowInfo(0, 360, 100);
+```
+
+#### impl
 ```
 BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
     CCreateContext* pContext)
@@ -68,11 +88,31 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
         return FALSE;
     }
 
-    // add the first splitter pane - the default view in column 0
-    if (!m_wndSplitter.CreateView(0, 0,
-        RUNTIME_CLASS(CLeftView), CSize(100, 100), pContext))
+    m_wndSplitter.SetColumnInfo(0, 100, 50);
+
+    // add the first splitter pane - which is a nested splitter with 2 rows
+    if (!m_wndSplitter1.CreateStatic(
+        &m_wndSplitter,     // our parent window is the first splitter
+        2, 1,               // the new splitter is 2 rows, 1 column
+        WS_CHILD | WS_VISIBLE | WS_BORDER,  // style, WS_BORDER is needed
+        m_wndSplitter.IdFromRowCol(0, 0)
+        // new splitter is in the first row, 2nd column of first splitter
+        ))
+    {
+        TRACE0("Failed to create nested splitter - Left\n");
+        return FALSE;
+    }
+
+    if (!m_wndSplitter1.CreateView(0, 0,
+        RUNTIME_CLASS(CLeftView), CSize(0, 170), pContext))
     {
         TRACE0("Failed to create first pane\n");
+        return FALSE;
+    }
+    if (!m_wndSplitter1.CreateView(1, 0,
+        RUNTIME_CLASS(CTextView), CSize(0, 70), pContext))
+    {
+        TRACE0("Failed to create second pane\n");
         return FALSE;
     }
 
@@ -99,15 +139,17 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
     if (!m_wndSplitter2.CreateView(0, 0,
         RUNTIME_CLASS(CMyExplorerView), CSize(0, cyText), pContext))
     {
-        TRACE0("Failed to create second pane\n");
+        TRACE0("Failed to create third pane\n");
         return FALSE;
     }
     if (!m_wndSplitter2.CreateView(1, 0,
         RUNTIME_CLASS(CDetailView), CSize(0, 70), pContext))
     {
-        TRACE0("Failed to create third pane\n");
+        TRACE0("Failed to create fourth pane\n");
         return FALSE;
     }
+
+    m_wndSplitter2.SetRowInfo(0, 360, 100);
 
     return TRUE;
 }
