@@ -158,5 +158,7 @@ BOOL CMainFrame::OnCreateClient(LPCREATESTRUCT /*lpcs*/,
 ## Ref
 - [createstatic()](https://learn.microsoft.com/en-us/cpp/mfc/reference/csplitterwnd-class?view=msvc-170#createstatic)
 - [createview()](https://learn.microsoft.com/en-us/cpp/mfc/reference/csplitterwnd-class?view=msvc-170#createview)
+- [SetColumnInfo](https://learn.microsoft.com/en-us/cpp/mfc/reference/csplitterwnd-class?view=msvc-170#setcolumninfo)
+- [SetRowInfo](https://learn.microsoft.com/en-us/cpp/mfc/reference/csplitterwnd-class?view=msvc-170#setrowinfo)
 - [ViewEx - MFC samples](https://github.com/microsoft/VCSamples/blob/master/VC2010Samples/MFC/general/viewex/splitter.cpp)
 - [Switch between views in a SDI with Splitter?](https://p2p.wrox.com/visual-c/12283-switch-between-views-sdi-splitter.html)
