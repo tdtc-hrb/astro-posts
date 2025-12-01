@@ -39,7 +39,7 @@ Parameter settings when not nested panes:
 //                           |  Scroll View (CDetailView)
 ```
 
-- fourth-way
+- [fourth-way](https://mega.nz/file/aQUFBaZI#bGWjfYz5uV8TXnUO_uRnxddqZ_nepgYHm5sBaoU7Oww)
 ```
 //    Tree View (CLeftView)  |  List View (CMyExplorerView)
 // ------------------------  |-----------------------------
