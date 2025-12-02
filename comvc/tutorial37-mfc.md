@@ -20,10 +20,15 @@ Chinese (Simplified, PRC)
 
 ### Loading STRINGTABLE value
 ```
+void CTextView::AssertValid() const
+{
+    CEditView::AssertValid();
+
     CString fmt;
 
     fmt.LoadString(IDS_STRING1);
     GetEditCtrl().SetWindowText(fmt);
+}
 ```
 
 ## Ref
