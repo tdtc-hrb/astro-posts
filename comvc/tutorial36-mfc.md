@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "The CString Class - 3"
 description: "COM and CString"
-date: 2025-12-03
+date: 2025-12-07
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -155,6 +155,34 @@ CString VariantToString(VARIANT * va)
           return CString("");
       } /* vt */
    }
+```
+
+### The ATL String Support Macros
+- [Arjay](https://forums.codeguru.com/showthread.php?348238-atlconv-h-header-error!!!&p=1189478#post1189478)    
+You need to use the ```USES_CONVERSION``` macro before using the convert functions.
+
+#### [Generic Conversion Macros](https://learn.microsoft.com/en-us/cpp/mfc/tn059-using-mfc-mbcs-unicode-conversion-macros?view=msvc-170#generic-conversion-macros)
+```
+A2CW      (LPCSTR) -> (LPCWSTR)
+A2W      (LPCSTR) -> (LPWSTR)
+W2CA      (LPCWSTR) -> (LPCSTR)
+W2A      (LPCWSTR) -> (LPSTR)
+```
+
+#### [example](https://stackoverflow.com/a/8050301)
+```
+#include <atlbase.h>
+#include <iostream>
+
+int _tmain(int argc, _TCHAR* argv[])
+{
+	USES_CONVERSION;
+
+	char szText[] = "Hello, world";
+	LPCWSTR w = A2W(szText);
+	std::wcout << w << std::endl;
+	return 0;
+}
 ```
 
 ## Ref
