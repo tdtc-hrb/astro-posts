@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "The Message Map - Mgr"
 description: "Tree view message events"
-date: 2025-12-08
+date: 2025-12-09
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -28,7 +28,9 @@ For example: MFC View Classes.
 |CDaoRecordView |DAO version of CRecordView |
 |COleDBRecordView |OLE DB version of CRecordView|
 
-### OnTvnSelchanged
+### CTreeView
+Take OnTvnSelchanged as an example.
+
 ![class wizard](https://github.com/tdtc-hrb/csdn/raw/master/images/class_wizard-vc12.png)
 
 Switch to the "Messages" tab; double-click the selected event.
