@@ -29,7 +29,7 @@ Add the following to the InitInstance() in <ProjName.cpp>:
     // Initialize OLE libraries
     if (!AfxOleInit())
     {
-        AfxMessageBox(_T("CoInitialize failed")); // IDP_OLE_INIT_FAILED
+        AfxMessageBox(_T("OLE initialization failed.  Make sure that the OLE libraries are the correct version.")); // IDP_OLE_INIT_FAILED
         return FALSE;
     }
 ```
