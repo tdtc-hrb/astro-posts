@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "The OLE clipboard"
 description: "Using Alternative Storage Media"
-date: 2025-12-09
+date: 2025-12-10
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -17,8 +17,8 @@ Remember, a data object is a COM object that implements the IDataObject interfac
 
 ### provider and consumer
 MFC’s OLE clipboard support is concentrated in two classes.
-- COleDataSource
-- COleDataObject
+- [COleDataSource](https://tdtc-hrb.github.io/com-vc/posts/tutorial43-mfc)
+- [COleDataObject](https://tdtc-hrb.github.io/com-vc/posts/tutorial44-mfc)
 
 The first, COleDataSource, models the provider side of clipboard operations.    
 The second, COleDataObject, models the consumer side.
