@@ -6,7 +6,7 @@ date: 2025-12-15
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-
+Based on the content of article number "[Sorting in a List Control](https://tdtc-hrb.github.io/com-vc/posts/tutorial46-mfc/)".
 ```
 void CMFCApplication1Dlg::SetSortArrow(int colIndex, bool ascending)
 {
@@ -53,3 +53,4 @@ void CMFCApplication1Dlg::OnLvnColumnclickList2(NMHDR *pNMHDR, LRESULT *pResult)
 
 ## Ref
 - [CListCtrl and sorting rows](https://www.codeproject.com/articles/CListCtrl-and-sorting-rows)
+- [ObjArraySerialDemo2.1.zip](https://mega.nz/file/mYcVzBiB#dHC3dYMfYALxM3qVtyRhHaylpEhjQJQH0h-07qWxNFg)
