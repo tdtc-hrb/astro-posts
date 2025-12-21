@@ -2,11 +2,26 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "ODBC3 - MFC"
 description: "CRecordView"
-date: 2025-12-20
+date: 2025-12-21
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-Use the CFormView template.
+Use the CFormView template, 
+and then manually rewrite it as CRecordView.
+- Inheritance Hierarchy
+```
+CObject
+    CCmdTarget
+        CWnd
+            CView
+                CScrollView
+                    CFormView
+                        CRecordView
+```
+> NOTE!!! The database wizard is no longer provided in VS2017 and later versions.
+
+![application wizard - step6](https://github.com/tdtc-hrb/csdn/raw/master/images/mfc_app_wizard6c-vc12.png)
+(Figure: Step 6 of the MFC Application Wizard in VS 2013)
 
 ### database support
 Implement database support in CRecordView.
@@ -59,3 +74,6 @@ Initialization is performed in "MFCApplication1View.cpp".
 	m_pSet = &GetDocument()->m_Rec1Set;
 	CRecordView::OnInitialUpdate();
 ```
+
+## Ref
+- [CRecordView Class](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordview-class?view=msvc-170)
