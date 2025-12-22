@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "ODBC3 - MFC"
 description: "CRecordView"
-date: 2025-12-21
+date: 2025-12-22
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -21,7 +21,7 @@ CObject
 > NOTE!!! The database wizard is no longer provided in VS2017 and later versions.
 
 ![application wizard - step6](https://github.com/tdtc-hrb/csdn/raw/master/images/mfc_app_wizard6c-vc12.png)
-(Figure: Step 6 of the MFC Application Wizard in VS 2013)
+(Figure: Step 6 of the MFC Application Wizard in Visual Studio 2013)
 
 ### database support
 Implement database support in CRecordView.
@@ -41,13 +41,16 @@ public:
 ```
 
 ### Document/View
-- document - declare
+- member - Document
+- member - View
+
+#### member - Document
 ```
 // Attributes
 public:
 	CRec1Set m_Rec1Set;
 ```
-- view - declare
+#### member - View
 ```
 public:
 #ifdef AFX_DESIGN_TIME
