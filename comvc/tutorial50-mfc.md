@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "ODBC3 - MFC"
 description: "CRecordView"
-date: 2025-12-22
+date: 2025-12-23
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -40,17 +40,27 @@ public:
 	virtual CRecordset* OnGetRecordset();
 ```
 
-### Document/View
-- member - Document
-- member - View
+## Document/View
+A document is a collection of data in your application with which the user interacts.
 
-#### member - Document
+Although the word document seems to imply something of a textual nature, it isn’t limited to text. 
+It could be data for a game, a geometric model, a text file, or, indeed, anything you want.
+
+The term document is just a convenient label for the application data in your program, treated as a unit.
+### member
 ```
 // Attributes
 public:
 	CRec1Set m_Rec1Set;
 ```
-#### member - View
+you add your own data members to store items that your application requires.
+### init
+Initialization is performed in "MFCApplication1View.cpp".
+```
+	// TODO: add construction code here
+	m_pSet = nullptr;
+```
+#### define
 ```
 public:
 #ifdef AFX_DESIGN_TIME
@@ -58,13 +68,12 @@ public:
 #endif
 	CRec1Set* m_pSet;
 ```
+at "MFCApplication1View.h"
 
-### init
-Initialization is performed in "MFCApplication1View.cpp".
-```
-	// TODO: add construction code here
-	m_pSet = nullptr;
-```
+![Figure 12-2](https://img2024.cnblogs.com/blog/359743/202511/359743-20251113074717676-340619099.png)
+uses dashed arrows to show how pointers are used to relate objects. These pointers 
+enable function members of one object to access the public data or function members in the interface of another object.
+
 #### OnInitialUpdate
 - old
 ```
@@ -77,6 +86,8 @@ Initialization is performed in "MFCApplication1View.cpp".
 	m_pSet = &GetDocument()->m_Rec1Set;
 	CRecordView::OnInitialUpdate();
 ```
+member functions(GetDocument()) to support processing of that data.
 
 ## Ref
 - [CRecordView Class](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordview-class?view=msvc-170)
+- Chapter 12: Windows Programming with the Microsoft Foundation Classes (MFC) - Beginning Visual C++ 2013
