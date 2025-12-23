@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "ODBC3 - MFC"
 description: "CRecordView"
-date: 2025-12-23
+date: 2025-12-24
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -70,7 +70,7 @@ public:
 ```
 at "MFCApplication1View.h"
 
-![Figure 12-2](https://img2024.cnblogs.com/blog/359743/202511/359743-20251113074717676-340619099.png)
+![Figure 12-2](https://github.com/tdtc-hrb/csdn/raw/master/images/figure12.2-vc12.png)
 uses dashed arrows to show how pointers are used to relate objects. These pointers 
 enable function members of one object to access the public data or function members in the interface of another object.
 
