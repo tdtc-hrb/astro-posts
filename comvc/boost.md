@@ -1,22 +1,18 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "安装boost库(VC)"
-description:  "vc11+ "
-date: 2024-11-19
+description:  "vc14+ "
+date: 2026-01-12
 author: "tdtc"
 ---
+Current Version(xyz): [1.90.0](https://www.boost.org/users/download/)
+- [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B#Internal_version_numbering)
 
-support of [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B#Internal_version_numbering)
 |     名称  | VS版本|Minimum version|
 |      -   | -    | -    |
-|msvc-11.0 |VS2012|[1.52.0](https://sourceforge.net/projects/boost/files/boost-binaries)|
-|msvc-12.0 |VS2013|[1.55.0](https://sourceforge.net/projects/boost/files/boost-binaries)|
 |msvc-14.0 |VS2015|[1.59.0](https://sourceforge.net/projects/boost/files/boost-binaries)|
-|msvc-14.1 |VS2017|[1.64.0](https://boostorg.jfrog.io/artifactory/main/release)|
 |msvc-14.2 |VS2019|[1.71.0](https://boostorg.jfrog.io/artifactory/main/release)|
 |msvc-14.3 |VS2022|[1.78.0](https://boostorg.jfrog.io/artifactory/main/release)|
-
-Current Version(xyz): [1.86.0](https://www.boost.org/users/download/)
 
 # 1. 编译(x86)
 x86 Native Tools Command Prompt for VS xxxx
@@ -33,8 +29,8 @@ bootstrap.bat
 ```
 <!-- vs2019: https://github.com/tdtc-hrb/csdn/raw/master/images/boost-cmd1.png -->
 <!-- vs2015: https://github.com/tdtc-hrb/csdn/raw/master/images/boost-cmd1(vs2015).png -->
-<!-- vs2022.6: https://github.com/tdtc-hrb/csdn/raw/master/images/boost-cmd1(vs2022).png -->
-![windows cmd1](https://github.com/tdtc-hrb/csdn/raw/master/images/boost-cmd1(vs2022.12).png)
+![vs2022.14](https://github.com/tdtc-hrb/csdn/raw/master/images/boost-cmd1(vs2022).png)
+<!-- vs2022.12: https://github.com/tdtc-hrb/csdn/raw/master/images/boost-cmd1(vs2022.12).png -->
 
 ### build
 - VS2022
@@ -112,8 +108,7 @@ int main()
 }
 ```
 
-### VS2015/13/12
-
+### VS2015
 The top of the reference header add:
 ```
 #include "stdafx.h"
