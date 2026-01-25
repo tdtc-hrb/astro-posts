@@ -2,22 +2,24 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Latest Clang for VSCode"
 description: "Standalone Cmake and Clang in VS Code"
-date: 2025-09-29
+date: 2026-01-24
 author: xiaobin
 tags: ["faq2", "Microsoft Visual C++", "Clang"]
 ---
 - [clang](https://github.com/llvm/llvm-project/releases)
-- [cmake](https://github.com/Kitware/CMake/releases)    
-[Visual Studio 2022 will require CMake Version 3.21 or later](https://llvm.org/docs/GettingStartedVS.html)
+- [cmake](https://github.com/Kitware/CMake/releases)
 - [ninja-build](https://github.com/ninja-build/ninja/releases)
 - [Visual Studio Code](https://code.visualstudio.com) - [CMake-tools plugin](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cmake-tools)
 
 ### [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B)
-- VS2015
 - [v14.1+](https://tdtc-hrb.github.io/ops-win/posts/vc-win)
 
 About: [clang-cl](https://clang.llvm.org/docs/UsersManual.html#clang-cl) is an alternative command-line interface to Clang, 
 designed for compatibility with the Visual C++ compiler, cl.exe.
+
+### cmake - visual studio
+- [Visual Studio 2026 will require CMake Version 4.2 or later](https://cmake.org/cmake/help/latest/generator/Visual%20Studio%2018%202026.html)
+- [Visual Studio 2022 will require CMake Version 3.21 or later](https://llvm.org/docs/GettingStartedVS.html)
 
 ## project
 ├── Circular.cpp    
