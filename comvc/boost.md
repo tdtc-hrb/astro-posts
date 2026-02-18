@@ -2,12 +2,13 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "安装boost库(VC)"
 description:  "vc14+ "
-date: 2026-01-12
+date: 2026-02-18
 author: "tdtc"
 ---
-Current Version(xyz): [1.90.0](https://www.boost.org/users/download/)
-- [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B#Internal_version_numbering)
+- [example](https://tdtc-hrb.github.io/com-vc/posts/boost-thread/)
 
+Current Version(xyz): [1.90.0](https://www.boost.org/users/download/)
+### [MSVC](https://en.wikipedia.org/wiki/Microsoft_Visual_C%2B%2B#Internal_version_numbering)
 |     名称  | VS版本|Minimum version|
 |      -   | -    | -    |
 |msvc-14.0 |VS2015|[1.59.0](https://sourceforge.net/projects/boost/files/boost-binaries)|
@@ -79,37 +80,3 @@ Project->Properties->Configuration Properties
 - c/c++->Code Generation
 <!-- vs2019: https://github.com/tdtc-hrb/csdn/raw/master/images/gen1-vc142.png -->
 ![VS2022 c++](https://github.com/tdtc-hrb/csdn/raw/master/images/gen1-vc143.png)
-
-
-## Example - [Creating and Managing Threads](https://theboostcpplibraries.com/boost.thread-management)
-```c++
-#include <boost/thread.hpp>
-#include <boost/chrono.hpp>
-#include <iostream>
-
-void wait(int seconds)
-{
-    boost::this_thread::sleep_for(boost::chrono::seconds{ seconds });
-}
-
-void thread()
-{
-    for (int i = 0; i < 5; ++i)
-    {
-        wait(1);
-        std::cout << i << std::endl;
-    }
-}
-
-int main()
-{
-    boost::thread t{ thread };
-    t.join();
-}
-```
-
-### VS2015
-The top of the reference header add:
-```
-#include "stdafx.h"
-```
