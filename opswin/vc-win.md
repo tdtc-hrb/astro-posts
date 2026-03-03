@@ -28,10 +28,10 @@ tags: ["Microsoft Visual C++"]
 
 ## [online](https://visualstudio.microsoft.com/vs/community)
 optional: 
-- msvc
+- Desktop development with C++
 - Windows SDK
-
-### msvc
+> Windows 11 SDK (10.0.226210)
+### Desktop development with C++
 - vs2022    
 MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
 - vs2026    
