@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "铁路车号读取"
 description: "使用IE"
-date: 2025-01-19
+date: 2026-03-05
 author: "tdtc"
 ---
 Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
@@ -142,6 +142,7 @@ RepoInfo.decode = function(string) {
 </body>
 </html>
 ```
+- [repoinfo - atl](https://github.com/veic-2005/repoinfo)
 
 # Test
 - 二进制文件工具：[EditPlus](https://www.editplus.com/download.html)    

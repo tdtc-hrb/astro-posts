@@ -2,18 +2,13 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "VC 创建 Component Object Model"
 description: "ATL Project Wizard"
-date: 2025-01-19
+date: 2025-03-05
 author: "tdtc"
 ---
-Recommendation: Starting October 14, 2025, do not use ATL or MFC in new projects.
-
-!!! 除了IE的ActiveX项目，不推荐ATL !!!    
-!!! ATL is not recommended except for IE ActiveX projects. !!!
-
 Use Visual Studio's wizard to create COM
 - Visual Studio 2013 ~ 2019    
 > x86 IDE
-- Visual Studio 2022    
+- Visual Studio 2022 ~ 2026    
 > x64 IDE
 
 step by step:
@@ -183,9 +178,18 @@ If you don't have one and you know what dll implements the object, you can run r
 ```bash
   cannot find the resource compiler dll. please make sure the path is correct.
 ```
-
 解决办法：    
 安装Windows 8.1/Windows 10 SDK
+
+### ps project
+Q: [What is the ($Foo)PS project in my $Foo ATL solution for?'(https://stackoverflow.com/questions/9582733/what-is-the-foops-project-in-my-foo-atl-solution-for)
+```
+COM supports making interface method calls across two different threads, two different processes or two different machines. 
+This is called marshaling. Two different threads is the most common case, a COM server is often not thread-safe. 
+COM implements thread-safety for such single-threaded coclasses by marshaling the call from the 'wrong' thread to the thread 
+that created the server. Marshaling between processes occurs when you write an out-of-process server. 
+Between different machines across a network is called DCOM.
+```
 
 
 # 参考文章
