@@ -181,22 +181,7 @@ If you don't have one and you know what dll implements the object, you can run r
 解决办法：    
 安装Windows 8.1/Windows 10 SDK
 
-### ps project
-Q: [What is the ($Foo)PS project in my $Foo ATL solution for?'(https://stackoverflow.com/questions/9582733/what-is-the-foops-project-in-my-foo-atl-solution-for)
-```
-COM supports making interface method calls across two different threads, two different processes or two different machines. 
-This is called marshaling. Two different threads is the most common case, a COM server is often not thread-safe. 
-COM implements thread-safety for such single-threaded coclasses by marshaling the call from the 'wrong' thread to the thread 
-that created the server. Marshaling between processes occurs when you write an out-of-process server. 
-Between different machines across a network is called DCOM.
-```
-
 
 # 参考文章
-- [ATL 项目向导](https://learn.microsoft.com/en-us/cpp/atl/reference/atl-project-wizard?view=msvc-170)
-- [ATL 项目向导的应用程序设置](https://learn.microsoft.com/en-us/cpp/atl/reference/application-settings-atl-project-wizard?view=msvc-170)
-- [添加 ATL 简单对象](https://learn.microsoft.com/en-us/cpp/atl/reference/adding-an-atl-simple-object?view=msvc-170)
-- [ATL 简单对象向导](https://learn.microsoft.com/en-us/cpp/atl/reference/atl-simple-object-wizard?view=msvc-170)
-- [ATL 简单对象向导的"选项"](https://learn.microsoft.com/en-us/cpp/atl/reference/options-atl-simple-object-wizard?view=msvc-170)
-- [添加方法](https://learn.microsoft.com/en-us/cpp/ide/adding-a-method-visual-cpp?view=msvc-170)
+- [ATL update](https://tdtc-hrb.github.io/com-vc/posts/update-atl)
 - [Changes to Project Templates and Code Wizards in 15.3](https://devblogs.microsoft.com/cppblog/changes-to-project-templates-and-code-wizards-in-15-3/)
