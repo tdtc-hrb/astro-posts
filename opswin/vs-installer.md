@@ -18,3 +18,22 @@ Take "Microsoft Build Tools" as an example:
 --add Microsoft.Component.MSBuild `
 --lang en-US
 ```
+
+### VC
+- v18
+```
+.\VisualStudioSetup.exe --layout D:\v18 `
+--add Microsoft.VisualStudio.Component.CoreEditor `
+--add Microsoft.VisualStudio.Workload.CoreEditor `
+--add Microsoft.VisualStudio.Component.Roslyn.Compiler `
+--add Microsoft.Component.MSBuild `
+--add Microsoft.VisualStudio.Component.TextTemplating `
+--add Microsoft.VisualStudio.Component.DiagnosticTools `
+--add Microsoft.VisualStudio.Component.VC.CoreIde `
+--add Microsoft.VisualStudio.Component.VC.Tools.x86.x64 `
+--add Microsoft.VisualStudio.Component.VC.Redist.14.Latest `
+--add Microsoft.VisualStudio.ComponentGroup.NativeDesktop.Core `
+--add Microsoft.VisualStudio.Workload.NativeDesktop `
+--add Microsoft.VisualStudio.Component.Windows11SDK.26100 `
+--lang en-US
+```
