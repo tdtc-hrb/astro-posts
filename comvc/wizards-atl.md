@@ -2,26 +2,14 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "VC 创建 Component Object Model"
 description: "ATL Project Wizard"
-date: 2025-01-19
+date: 2025-03-05
 author: "tdtc"
 ---
-!!! 除了IE的ActiveX项目，不推荐ATL !!!    
-!!! ATL is not recommended except for IE ActiveX projects. !!!
-
-Use Visual Studio's wizard to create COM
-- Visual Studio 2013 ~ 2019    
-> x86 IDE
-- Visual Studio 2022    
-> x64 IDE
-
-step by step:
 - 建立ATL工程
 - 建立ATL Simple Object
 - 添加IDL方法
-- 测试添加的method
 
-
-# 建立ATL工程
+## ATL工程
 File->New->Project
 <!-- vs2017: https://gitee.com/xiaobin80/csdn/raw/master/images/20200201162120769.png -->
 <!-- vs2013: https://github.com/tdtc-hrb/csdn/raw/master/images/atl-new1(vs2013).png -->
@@ -39,24 +27,6 @@ Note: name即是要生成的DLL文件
 <!-- vs2017: https://gitee.com/xiaobin80/csdn/raw/master/images/20200201171441614.png -->
 <!-- vs2013: https://github.com/tdtc-hrb/csdn/raw/master/images/atl-new2(vs2013).png -->
 ![project property](https://github.com/tdtc-hrb/csdn/raw/master/images/atl-new3(vs2019).png)
-
-### Choice Platform
-Build -> Configuration Manager
-```
-x64 or x86
-```
-
-### 取消编译时注册Dll
-> Project -> Properties
-```
-Linker -> Register Output
-No
-```
-#### x64 for vs2022+
-```
-Linker -> All Options -> 
-Register Output: No
-```
 
 ## Add ATL Simple Object
 > 右击项目名称
@@ -77,8 +47,7 @@ ATL Simple Object:
 ![atl simple object - new](https://github.com/tdtc-hrb/csdn/raw/master/images/atl-simple2.png)
 
 ### 设置
-Short name: testSOW
-
+- Short name: testSOW
 - Simple Object ID    
 ProgID: testATL.testSOW
 <!-- vs2017: https://gitee.com/xiaobin80/csdn/raw/master/images/20200313202352422.png -->
@@ -122,7 +91,7 @@ testATL.idl(part):
 ```
 
 
-# test
+## test
 - 注册COM
 ```cmd
 @echo
@@ -132,15 +101,15 @@ Regsvr32 xbfInfo.dll
 - Debug版本    
 拷贝
 ```
-C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Redist\MSVC\14.42.34433\x86\Microsoft.VC143.CRT\vcruntime140d.dll
+<Visual-Studio Installation Path>\vcruntime140d.dll
 ```
  and 
 ```
 C:\Windows\SysWOW64\ucrtbased.dll
 ```
-放到testATL.dll所在的目录
+放到project目录
 
-## VB Project
+### VB Project
 Project -> Add Reference
 ![vb import dll](https://github.com/tdtc-hrb/csdn/raw/master/images/atl-import16.png)
 
@@ -158,39 +127,6 @@ Project -> Add Reference
 拷贝Interop.testATLLib.dll和WindowsApplication1.exe即可
 ![运行](https://github.com/tdtc-hrb/csdn/raw/master/images/atl-exec16.png)
 
-## Issues
-Q: Vs 2012+
-```
-System.Runtime.InteropServices.COMException (0x80040154): 
-Retrieving the COM class factory for component with CLSID 
-{7A6E7413-F0E2-41B8-9BB7-036229C90FE5} failed due to the following 
-error: 80040154 Class not registered (Exception from HRESULT: 0x80040154 (REGDB_E_CLASSNOTREG)).
-```
-A: vs高版本已经使用[32/64位](https://stackoverflow.com/a/4664073)    
-It means the class id 877AA945-1CB2-411C-ACD7-C70B1F9E2E32 is not in the registry.
-
-You can verify this by opening regedit.exe, browsing to HKEY_CLASSES_ROOT\CLSID\{877AA945-1CB2-411C-ACD7-C70B1F9E2E32}.    
-If your running a 32-bit app on a 64 bit OS, look for HKEY_CLASSES_ROOT\Wow6432Node\CLSID\{877AA945-1CB2-411C-ACD7-C70B1F9E2E32}
-
-If it is there, it may be some other issue but it is probably missing.    
-To resolve this you will usually run the installer that distributes this COM object.    
-If you don't have one and you know what dll implements the object, you can run regsvr32.exe (or regasm.exe for a managed dll).
-
-### ucrt
-仅安装ucrt（通用Windows sdk）会出现：
-```bash
-  cannot find the resource compiler dll. please make sure the path is correct.
-```
-
-解决办法：    
-安装Windows 8.1/Windows 10 SDK
-
-
-# 参考文章
-- [ATL 项目向导](https://learn.microsoft.com/en-us/cpp/atl/reference/atl-project-wizard?view=msvc-170)
-- [ATL 项目向导的应用程序设置](https://learn.microsoft.com/en-us/cpp/atl/reference/application-settings-atl-project-wizard?view=msvc-170)
-- [添加 ATL 简单对象](https://learn.microsoft.com/en-us/cpp/atl/reference/adding-an-atl-simple-object?view=msvc-170)
-- [ATL 简单对象向导](https://learn.microsoft.com/en-us/cpp/atl/reference/atl-simple-object-wizard?view=msvc-170)
-- [ATL 简单对象向导的"选项"](https://learn.microsoft.com/en-us/cpp/atl/reference/options-atl-simple-object-wizard?view=msvc-170)
-- [添加方法](https://learn.microsoft.com/en-us/cpp/ide/adding-a-method-visual-cpp?view=msvc-170)
-- [Changes to Project Templates and Code Wizards in 15.3](https://devblogs.microsoft.com/cppblog/changes-to-project-templates-and-code-wizards-in-15-3/)
+## Ref
+- [ATL update](https://tdtc-hrb.github.io/com-vc/posts/update-atl)
+- [ATL update 2](https://tdtc-hrb.github.io/com-vc/posts/update2-atl)
