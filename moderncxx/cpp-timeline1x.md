@@ -41,14 +41,12 @@ tags: ["C++ standard"]
 - [clang](https://clang.llvm.org/cxx_status.html)
 
 ### gcc
-GCC added partial, experimental C++20 support in 2017[84] in version 8 through the option -std=c++2a. 
-Like Clang, GCC replaced this option with -std=c++20 in version 10. 
-It also has an option to enable GNU extensions in addition to the experimental C++20 support, -std=gnu++20.
+- gcc 8    
+c++ 17
 
-from [Partial - wiki](https://en.wikipedia.org/wiki/C%2B%2B20)
 ### msvc
-- [vs2015](https://devblogs.microsoft.com/cppblog/c111417-features-in-vs-2015-rtm/)    
-C++ 11
+- vs2019    
+C++ 17
 - vs2022    
 C++ 20
 
