@@ -37,3 +37,34 @@ Take "Microsoft Build Tools" as an example:
 --add Microsoft.VisualStudio.Component.Windows11SDK.26100 `
 --lang en-US
 ```
+### fx
+- v16
+```
+.\vs_Community.exe --layout D:\vs2019 `
+--add Microsoft.VisualStudio.Component.CoreEditor `
+--add Microsoft.VisualStudio.Workload.CoreEditor `
+--add Microsoft.VisualStudio.Component.Roslyn.Compiler `
+--add Microsoft.Component.MSBuild `
+--add Microsoft.VisualStudio.Component.TextTemplating `
+--add Microsoft.VisualStudio.Component.IntelliCode `
+--add Microsoft.VisualStudio.Component.Debugger.JustInTime `
+--add Microsoft.VisualStudio.Component.NuGet `
+--add Microsoft.Net.Component.4.6.1.TargetingPack `
+--add Microsoft.VisualStudio.Component.Roslyn.LanguageServices `
+--add Microsoft.VisualStudio.Component.FSharp `
+--add Microsoft.ComponentGroup.ClickOnce.Publish `
+--add Microsoft.NetCore.Component.DevelopmentTools `
+--add Microsoft.Net.Component.4.8.SDK `
+--add Microsoft.Net.Component.4.7.2.TargetingPack `
+--add Microsoft.Net.ComponentGroup.DevelopmentPrerequisites `
+--add Microsoft.VisualStudio.Component.ManagedDesktop.Core `
+--add Microsoft.VisualStudio.Component.ManagedDesktop.Prerequisites `
+--add Microsoft.VisualStudio.Workload.ManagedDesktop `
+--add Microsoft.Net.Component.4.5.2.TargetingPack `
+--add Microsoft.Net.Component.4.5.TargetingPack `
+--add Microsoft.Net.Component.4.TargetingPack `
+--add Microsoft.Net.Component.4.5.1.TargetingPack `
+--add Microsoft.Net.Component.4.6.TargetingPack `
+--add Microsoft.Net.ComponentGroup.TargetingPacks.Common `
+--lang en-US
+```
