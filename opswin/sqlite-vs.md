@@ -26,6 +26,38 @@ build.bat ReleaseManagedOnly
 ```cmd
 build.bat ReleaseNativeOnly Win32
 ```
+- build the binaries for x64
+```
+build.bat ReleaseNativeOnly x64
+```
+
+## inno
+- Add App(iscc.exe) path to system path
+- remove SQLite.Designer.x
+```
+;;;Components: Application\Designer; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\SQLite.Designer.dll; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
+;;;Components: Application\Designer and Application\Symbols; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\SQLite.Designer.pdb; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
+```
+### System.Data.SQLite.dll not exist
+Choose one of the two options:
+- a) Change the switch.
+- b) Change the path.
+
+#### a - ln194
+```
+#if Pos("NativeOnly", AppConfiguration) == 1
+```
+#### b
+```
+Components: Application\Core\MSIL; Tasks: gac; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\System.Data.SQLite.dll; DestDir: {app}\GAC; StrongAssemblyName: "System.Data.SQLite, Version={#AppVersion}, Culture=neutral, PublicKeyToken={#AppPublicKey}, ProcessorArchitecture={#GacProcessor}"; Flags: restartreplace uninsrestartdelete uninsnosharedfileprompt sharedfile gacinstall
+Components: Application\Core\MSIL; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\System.Data.SQLite.dll; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
+Components: Application\Core\MSIL and Application\Symbols; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\System.Data.SQLite.pdb; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
+```
+
+### done
+```
+bake_all.bat
+```
 
 ## Ref
 - [v1.0.112](https://system.data.sqlite.org/home/doc/7727af784b0f153b/www/build.wiki)
