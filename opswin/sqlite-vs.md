@@ -55,6 +55,20 @@ Components: Application\Core\MSIL and Application\Symbols; Source: ..\..\bin\{#Y
 ```
 
 ### done
+- Modify the Inno version in bake.bat:
+```
+IF "%PROCESSOR_ARCHITECTURE%" == "x86" GOTO set_path_x86
+
+SET INNOSETUPPATH=%ProgramFiles(x86)%\Inno Setup 7
+GOTO set_path_done
+
+:set_path_x86
+
+SET INNOSETUPPATH=%ProgramFiles%\Inno Setup 7
+
+:set_path_done
+```
+- Package installation
 ```
 bake_all.bat
 ```
