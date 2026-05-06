@@ -19,6 +19,24 @@ Take "Microsoft Build Tools" as an example:
 --lang en-US
 ```
 
+### EOL
+|name|eol - Official|
+|-|-|
+|Visual Studio 2019|April 2029|
+|Visual Studio 2017|April 2027|
+
+#### 32-bit
+NOTE: Visual Studio 2019 (16.11.55) now ships with the updated NodeJS version 22, specifically 22.21.1. 
+It's worth noting that NodeJS 22.x will be the final release supporting 32-bit NodeJS development, 
+marking the end of an era for those using 32-bit platforms.
+
+NodeJS 22.x is scheduled to reach End Of Life in April 2027.
+
+#### win7
+Earlier versions of Visual Studio 2017 could be installed on Windows 7.
+
+[The latest version no longer supports this.](https://www.reddit.com/r/VisualStudio/comments/1nzzt4p/is_windows_7_no_longer_supported_for_visual_studio/)
+
 ### VC
 - v18
 ```
