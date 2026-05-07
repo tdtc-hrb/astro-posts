@@ -39,21 +39,15 @@ build.bat ReleaseNativeOnly x64
 ;;;Components: Application\Designer and Application\Symbols; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\SQLite.Designer.pdb; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
 ```
 ### System.Data.SQLite.dll not exist
-Choose one of the two options:
-- a) Change the switch.
-- b) Change the path.
-
-#### a - ln194
+Due to official documentation corrections, the following two commands need to be added:
+- build the binaries for Win32 (x86)
+```cmd
+build.bat Release Win32
 ```
-#if Pos("NativeOnly", AppConfiguration) == 1
+- build the binaries for x64
 ```
-#### b
+build.bat Release x64
 ```
-Components: Application\Core\MSIL; Tasks: gac; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\System.Data.SQLite.dll; DestDir: {app}\GAC; StrongAssemblyName: "System.Data.SQLite, Version={#AppVersion}, Culture=neutral, PublicKeyToken={#AppPublicKey}, ProcessorArchitecture={#GacProcessor}"; Flags: restartreplace uninsrestartdelete uninsnosharedfileprompt sharedfile gacinstall
-Components: Application\Core\MSIL; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\System.Data.SQLite.dll; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
-Components: Application\Core\MSIL and Application\Symbols; Source: ..\..\bin\{#Year}\{#BaseConfiguration}\bin\System.Data.SQLite.pdb; DestDir: {app}\bin; Flags: restartreplace uninsrestartdelete
-```
-
 ### done
 - Modify the Inno version in bake.bat:
 ```
