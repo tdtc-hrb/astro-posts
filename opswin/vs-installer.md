@@ -6,7 +6,6 @@ date: 2025-09-28
 author: xiaobin
 tags: ["faq2", "Visual Studio Online"]
 ---
-- [vs2017](http://aka.ms/vs/15/release/vs_community.exe)
 - [vs2019](http://aka.ms/vs/16/release/vs_community.exe)
 - [vs2022](http://aka.ms/vs/17/release/vs_community.exe)
 
