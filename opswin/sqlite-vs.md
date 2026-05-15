@@ -6,18 +6,12 @@ date: 2026-05-07
 author: xiaobin
 tags: ["faq5", "javascript_projectsystem.msi", "Physical disconnection"]
 ---
-The official website no longer provides the installation program.
-
-down [ZIP-src](https://system.data.sqlite.org/home/rchvdwnld/7727af784b0f153b)
-
-## install visual studio 2015
-- use [network proxy](https://tdtc-hrb.github.io/csdn/post/ops_network_proxy)
-> javascript_projectsystem.msi miss issue
-### VSSDK
-- You should see a tree view of custom features. Open Common Tools. 
-You should see "Visual Studio Extensibility Tools" .
+- VC
+> MFC is not required.
+- VSSDK
+> SQLite.Designer is required during compilation.
 ![](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/extensibility/media/vssdkinstall.png)
-- Check Visual Studio Extensibility Tools , then click Next and continue the installation.
+
 
 ## build the System.Data.SQLite ("SDS") binaries
 ```cmd
@@ -69,7 +63,8 @@ bake_all.bat
 ```
 
 ## Ref
-- [v1.0.112](https://system.data.sqlite.org/home/doc/7727af784b0f153b/www/build.wiki)
+- [v1.0.120.0](https://system.data.sqlite.org/home/info/7727af784b0f153b)
+- [v1.0.105.2](https://system.data.sqlite.org/home/info/0fadcbe4d2827d69)
 - [visual studio 2015 javascript_projectsystem](https://stackoverflow.com/a/39130542)
 - [Installing the Visual Studio SDK](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/extensibility/installing-the-visual-studio-sdk?view=vs-2015)
 - [Visual Studio SDKs](https://www.visualstudioextensibility.com/downloads/vs-sdks/)
