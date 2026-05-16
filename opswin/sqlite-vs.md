@@ -13,7 +13,7 @@ tags: ["faq5", "javascript_projectsystem.msi", "Physical disconnection"]
 ![](https://learn.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2015/extensibility/media/vssdkinstall.png)
 
 
-## build the System.Data.SQLite ("SDS") binaries
+## Automated Build - command line
 ```cmd
 cd <root>\Setup
 ```
@@ -29,6 +29,17 @@ build.bat ReleaseNativeOnly Win32
 ```
 build.bat ReleaseNativeOnly x64
 ```
+
+## Manual Build - VS2019
+If you don't have VS2015 installed, then build manually.
+
+Open "SQLite.NET.2015.sln" with VS2019.
+
+### About SQLite.NET.2015.sln and SQLite.NET.2015.MSBuild.sln
+- SQLite.NET.2015.sln    
+Provide for manual build
+- SQLite.NET.2015.MSBuild.sln    
+Provide for automated building
 
 ## inno
 - Add App(iscc.exe) path to system path
@@ -63,6 +74,7 @@ bake_all.bat
 ```
 
 ## Ref
+- [Build Procedures](https://system.data.sqlite.org/home/doc/branch-v1/www/build.wiki)
 - [v1.0.120.0](https://system.data.sqlite.org/home/info/7727af784b0f153b)
 - [v1.0.105.2](https://system.data.sqlite.org/home/info/0fadcbe4d2827d69)
 - [visual studio 2015 javascript_projectsystem](https://stackoverflow.com/a/39130542)
