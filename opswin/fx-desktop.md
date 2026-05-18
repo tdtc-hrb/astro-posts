@@ -3,7 +3,7 @@ title: "Desktop development environment for .NET"
 description: ".NET development tools"
 date: 2025-02-22
 author: xiaobin
-tags: ["faq6", ".NET Framework 4", "Visual Studio 2019", "Visual Studio 2017"]
+tags: ["faq6", ".NET Framework 4", "Visual Studio 2019"]
 ---
 
 An error occurred trying to load the page.    
@@ -11,7 +11,7 @@ Could not load file or assembly 'Microsoft.VSDesigner, Version=x.x.x.x, Culture=
 The system cannot find the file specified.
 ```
 Control Panel -> Add/Remove Programs
-right click "Visual Studio 20xx" -> Change
+right click "Visual Studio 2019" -> Change
 Check ".NET desktop development"
 ```
 
@@ -25,6 +25,5 @@ Check ".NET desktop development"
 --add Microsoft.Net.Component.4.6.TargetingPack `
 --add Microsoft.Net.ComponentGroup.TargetingPacks.Common `
 ```
-These options are available in Visual Studio 2017/2019：
+These options are available in Visual Studio 2019：
 - [vs2019 - v16.11](https://aka.ms/vs/16/release/vs_Community.exe)
-- [vs2017 - v15.9](https://aka.ms/vs/15/release/vs_community.exe)
