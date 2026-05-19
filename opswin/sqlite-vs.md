@@ -41,6 +41,13 @@ Provide for manual build
 - SQLite.NET.2015.MSBuild.sln    
 Provide for automated building
 
+### Cannot open include file: 'malloc.h'
+- Install Windows SDK
+
+ref [Malloc library](https://developercommunity.visualstudio.com/t/malloc-library/63279),
+[C header files missing to compile Sqlite3.c](https://stackoverflow.com/a/65878315),
+[Compiling amalgamation with Visual Studio 2019](https://sqlite.org/forum/forumpost/76a60b19f8?t=c&unf)
+
 ## inno
 - Add App(iscc.exe) path to system path
 
