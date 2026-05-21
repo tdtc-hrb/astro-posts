@@ -2,29 +2,27 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Desktop development with C++"
 description: "installation and configuration"
-date: 2026-01-25
+date: 2026-05-21
 author: xiaobin
 tags: ["Microsoft Visual C++"]
 ---
-
+- The current main force is VC14: Visual Studio 2026
 ## installation
-optional: 
 - Desktop development with C++
 - Windows SDK
-> Windows 11 SDK (10.0.226210)
+> Windows 11 SDK (10.0.22621.0)
 ### Desktop development with C++
-- vs2022    
-MSVC v143 - VS 2022 C++ x64/x86 build tools(Latest)
-- vs2026    
-MSVC v145 - x64/x86 build tools(Latest)
+- vs2026
+
+MSVC Build Tools for x64/x86(Latest)
 
 ## configuration
 - Cmake
 
 ### Cmake - update version
-- vs2022
-`Tools -> options`
-choice "CMake" and set at "Custom CMake information":
+- vs2026
+`Tools -> options -> CMake`
+checked:
 ```
 Enable custom CMake executable
 ```
