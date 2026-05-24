@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "VC升级时出现的问题"
 description: "ATL and CRT"
-date: 2026-01-19
+date: 2026-05-24
 author: "tdtc"
 ---
 - ATL
@@ -200,16 +200,16 @@ process.obj
 ```
 
 #### Solution
-[project setting](https://stackoverflow.com/a/47148616) 
-and [David Xanatos](https://community.sophos.com/sandboxie/f/forum/119641/important-sandboxie-open-source-code-is-available-for-download)
+David Xanatos:
 ```
 because VS 2015.3 encounters some linker errors in SBoxDll,
 like "unresolved external symbol memcmp", "unresolved external symbol memmove" and so on
 To resolve the issue I had to add to the linker vcruntime.lib, libucrt.lib and libcmt.lib
 ```
-properties->Linker->Input->Additional Dependencies
+- [properties->Linker->Input->Additional Dependencies](https://stackoverflow.com/a/47148616)
 ```
 vcruntime.lib
+ucrt.lib
 ```
 
 ## Character constant
