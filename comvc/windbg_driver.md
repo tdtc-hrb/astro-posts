@@ -2,22 +2,25 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "windbg调试sandboxie driver"
 description: "串口方式"
-date: 2022-09-06
+date: 2026-05-25
 author: "tdtc"
 ---
+- [WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads)
 
-  Sandboxie builds under [MS Visual Studio 2015](https://gitee.com/xiaobin80/sandboxie/blob/master/ReadMe.md).    
-  可以升级到vs2017 & windows sdk8.1.
+|Windows Version|Build Number|Supported Visual Studio|SDK|WDK|Comments|
+|-|-|-|-|-|-|
+|Windows 11 25H2 (Ge)|26100.6584|VS 2022|SDK|WDK|This version is the default supported kit for Windows driver development in VS2022.|
+|Windows 11 22H2 (Ni)|22621.5193|VS 2022|SDK|WDK|Supported for Windows 10 x86/ARM32 driver development only.|
+|Windows 10 2004 (VB)|19041.5738|VS 2019|SDK|WDK|Supported for Windows 7/Windows 8/Windows 8.1 driver development only.|
+
+#### Enterprise WDK (EWDK)
+Instead of downloading Visual Studio, the SDK, and the WDK separately, you can download the EWDK. 
+The EWDK is a standalone, self-contained command-line environment for building drivers. 
+It includes Visual Studio Build Tools, the SDK, and the WDK.
 
 # Prepare
-Host Env:
-- OS    
-Win1809(x64)
-- VM    
-  VMware(v10.0.7) / Vbox(v6.1.38)
-- [WDK(include windbg)](https://docs.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads#step-2-install-the-wdk)    
-[Windows Driver Kit Version 7.1.0 - win7](https://www.microsoft.com/en-us/download/details.aspx?id=11800) /
- [Windows 10, version 2004 - win8.1](https://go.microsoft.com/fwlink/?linkid=2128854)
+- VMware(v10.0.7)
+- Vbox
 
 ## VM setting - serial port
 > vmware or vbox
