@@ -10,7 +10,6 @@ author: "tdtc"
 |Windows Version|Build Number|Supported Visual Studio|SDK|WDK|Comments|
 |-|-|-|-|-|-|
 |Windows 11 25H2 (Ge)|26100.6584|VS 2022|SDK|WDK|This version is the default supported kit for Windows driver development in VS2022.|
-|Windows 11 22H2 (Ni)|22621.5193|VS 2022|SDK|WDK|Supported for Windows 10 x86/ARM32 driver development only.|
 |Windows 10 2004 (VB)|19041.5738|VS 2019|SDK|WDK|Supported for Windows 7/Windows 8/Windows 8.1 driver development only.|
 
 #### Enterprise WDK (EWDK)
