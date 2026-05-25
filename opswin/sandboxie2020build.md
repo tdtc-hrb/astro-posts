@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "编译sandboxie"
-description: "使用vs2019"
-date: 2026-05-25
+description: "使用vs2019/vs2022"
+date: 2026-05-26
 author: "tdtc"
 ---
 - Sbox Driver
@@ -15,13 +15,21 @@ Sandbox32.props and Sandbox64.props:
 ```
 <WDKPATH>\Program Files (x86)\Windows Kits\10</WDKPATH>
 ```
+### path
+- vs2019
+```
+10.0.19041.0
+```
+- vs2022
+```
+10.0.26100.0
+```
 #### include
 ```
 $(WDKPATH)\Include\10.0.19041.0\km
 $(WDKPATH)\Include\10.0.19041.0\ucrt
 $(WDKPATH)\Include\10.0.19041.0\um
 ```
-
 #### library
 - x86
 ```
