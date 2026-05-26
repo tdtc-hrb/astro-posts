@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Desktop development with C++"
 description: "installation and configuration"
-date: 2026-05-21
+date: 2026-05-26
 author: xiaobin
 tags: ["Microsoft Visual C++"]
 ---
@@ -29,16 +29,23 @@ MSVC v142 - VS 2019 C++ x64/x86 build tools(Latest)
 - Windows 11 SDK (10.0.26100.0)
 - Windows 10 SDK (10.0.19041.0)
 
-### Windows Driver Kit
-Windows 11(Arm) development is supported starting with VS2022.
-
+### Windows Driver Kit - vs2022+
 - Win SDK/WDK 10.0.22621.0
 ```
 Installation of Component.Microsoft.Windows.DriverKit failed. 
 The extension has a lower version than required by Visual Studio. 
 Please install the extension from Visual Studio Installer instead.
 ```
-You need to install SDK and WDK version 10.0.26100.0.
+Windows 11(Arm) development is supported starting with VS2022.
+
+#### Step 1: Install Visual Studio 2022+
+- MFC
+- ATL
+- SDK
+- Windows Driver Kit
+
+#### Step 2: Install the WDK
+- [Download previous versions of the WDK](https://learn.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads)
 
 ## configuration
 - Cmake
