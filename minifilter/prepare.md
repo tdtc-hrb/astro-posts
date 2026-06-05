@@ -20,6 +20,47 @@ MSVC v142 - VS 2019 C++ x64/x86 Spectre-mitgated libs(Latest)
 |Windows 11 25H2 (Ge)|26100.6584|VS 2022|SDK|WDK|This version is the default supported kit for Windows driver development in VS2022.|
 |Windows 10 2004 (VB)|19041.5738|VS 2019|SDK|WDK|Supported for Windows 7/Windows 8/Windows 8.1 driver development only.|
 
+## Project setting
+- VC++ Directories
+- Linker
+
+### wdk path
+create props file:
+```
+view -> Other Windows -> Property Manager
+```
+add wdk path:
+```
+User Macros -> Add Macro
+```
+- name and value:
+```
+WDKPATH
+\Program Files (x86)\Windows Kits\10
+```
+- checked
+```
+Set this macro as an environment variable in the build environment
+```
+
+### VC++ Directories
+- Include Directories
+```
+$(WDKPATH)\Include\10.0.19041.0\km;
+$(WDKPATH)\Include\10.0.19041.0\ucrt;
+$(WDKPATH)\Include\10.0.19041.0\um;
+```
+- Library Directories
+```
+$(WDKPATH)\lib\10.0.19041.0\km\x86;
+```
+
+### Linker
+- Input
+```
+ntoskrnl.lib;hal.lib;wmilib.lib;fltmgr.lib;vcruntime.lib;ucrt.lib;
+```
+
 ## Guest OS
 - Windows 10 1809
 - [DebugView.zip](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview)
