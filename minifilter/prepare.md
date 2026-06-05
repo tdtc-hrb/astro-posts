@@ -14,6 +14,12 @@ author: "tdtc"
 MSVC v142 - VS 2019 C++ x64/x86 Spectre-mitgated libs(Latest)
 ```
 
+### [WDK](https://docs.microsoft.com/en-us/windows-hardware/drivers/other-wdk-downloads)
+|Windows Version|Build Number|Supported Visual Studio|SDK|WDK|Comments|
+|-|-|-|-|-|-|
+|Windows 11 25H2 (Ge)|26100.6584|VS 2022|SDK|WDK|This version is the default supported kit for Windows driver development in VS2022.|
+|Windows 10 2004 (VB)|19041.5738|VS 2019|SDK|WDK|Supported for Windows 7/Windows 8/Windows 8.1 driver development only.|
+
 ## Guest OS
 - Windows 10 1809
 - [DebugView.zip](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview)
