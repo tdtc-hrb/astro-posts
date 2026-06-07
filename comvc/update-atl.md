@@ -206,10 +206,9 @@ because VS 2015.3 encounters some linker errors in SBoxDll,
 like "unresolved external symbol memcmp", "unresolved external symbol memmove" and so on
 To resolve the issue I had to add to the linker vcruntime.lib, libucrt.lib and libcmt.lib
 ```
-- [properties->Linker->Input->Additional Dependencies](https://stackoverflow.com/a/47148616)
+- properties->Linker->Input->Additional Dependencies
 ```
 vcruntime.lib
-ucrt.lib
 ```
 
 ## Character constant
