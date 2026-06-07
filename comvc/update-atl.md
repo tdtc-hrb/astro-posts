@@ -179,10 +179,15 @@ Cannot open include file: 'atlimpl.cpp': No such file or directory
 In VS 12 at least atlimpl.cpp is not even present.
 
 ## LNK2001
-- IDE: Visual Studio 2015 update 3
-- Windows Driver Kit Version 7.1.0
+- [Sandboxie](https://gitee.com/xiaobin80/sandboxie)
+David Xanatos:
+```
+because VS 2015.3 encounters some linker errors in SBoxDll,
+like "unresolved external symbol memcmp", "unresolved external symbol memmove" and so on
+To resolve the issue I had to add to the linker vcruntime.lib, libucrt.lib and libcmt.lib
+```
 
-### [Sandboxie](https://gitee.com/xiaobin80/sandboxie)
+### memcmp
 at SboxDrv project:
 ```
 Error LNK2001 unresolved external symbol _memcmp SboxDrv C:\Users\tdtc\Documents\sandboxie\core\drv\XXX.obj
@@ -198,17 +203,24 @@ ipc.obj
 key.obj
 process.obj
 ```
-
-#### Solution
-David Xanatos:
-```
-because VS 2015.3 encounters some linker errors in SBoxDll,
-like "unresolved external symbol memcmp", "unresolved external symbol memmove" and so on
-To resolve the issue I had to add to the linker vcruntime.lib, libucrt.lib and libcmt.lib
-```
 - properties->Linker->Input->Additional Dependencies
 ```
 vcruntime.lib
+```
+### wcscpy
+at SBoxDll project:
+```
+Error LNK2001 unresolved external symbol _wcscpy SboxDll C:\Users\tdtc\Documents\sandboxie\core\dll\XXX.obj
+```
+XXX:
+```
+rpcrt.obj
+...
+```
+- [properties->Linker->Input->Additional Dependencies](https://stackoverflow.com/a/47148616)
+```
+vcruntime.lib
+ucrt.lib
 ```
 
 ## Character constant
