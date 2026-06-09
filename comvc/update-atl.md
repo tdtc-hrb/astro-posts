@@ -207,15 +207,29 @@ process.obj
 ```
 vcruntime.lib
 ```
+### vswprintf
+```
+Error LNK2001 unresolved external symbol __stdio_common_vswprintf SboxDrv C:\Users\tdtc\Documents\sandboxie\core\drv\XXX.obj
+```
+Two solutions: 
+- one is to disable it; 
+- the other is to add an additional library.
+
+#### [disable it](https://stackoverflow.com/a/67745800)
+C/C++ -> Command Line:
+```
+/D_NO_CRT_STDIO_INLINE
+```
+#### Additional Dependencies
+properties->Linker->Input->Additional Dependencies
+```
+ucrt.lib
+```
+
 ### wcscpy
 at SBoxDll project:
 ```
 Error LNK2001 unresolved external symbol _wcscpy SboxDll C:\Users\tdtc\Documents\sandboxie\core\dll\XXX.obj
-```
-XXX:
-```
-rpcrt.obj
-...
 ```
 - [properties->Linker->Input->Additional Dependencies](https://stackoverflow.com/a/47148616)
 ```
