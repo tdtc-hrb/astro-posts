@@ -3,19 +3,9 @@ title: "使用 NSIS (Nullsoft Scriptable Install System)"
 description: "生成sandboxie的安装分发"
 date: 2022-09-03T00:08:08+08:00
 ---
-
-  编译xp目标，[vs2015 for xp](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2017/install/workload-component-id-vs-build-tools?view=vs-2017) 
-需要如下组件:    
-```
-Microsoft.VisualStudio.Component.VC.140
-Microsoft.VisualStudio.Component.WinXP
-```
-  在目标机xp 安装[Microsoft Visual C++ 2015 Redistributable Update 3](https://www.microsoft.com/en-us/download/confirmation.aspx?id=53587)
-
 - OS    
 Win1809(x64)
 - VS2017(v15.9)
-
 
 # Installation
 down [v2.51](https://sourceforge.net/projects/nsis/files/NSIS%202/2.51/)
