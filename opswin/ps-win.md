@@ -38,3 +38,13 @@ mkdir c:\mount
 dism /mount-wim /wimfile:d:\sources\install.wim /index:4 /mountdir:c:\mount /readonly
 install-windowsfeature server-gui-mgmt-infra,server-gui-shell –restart –source c:\mount\windows\winsxs
 ```
+
+### [PowerShell 7+](https://github.com/PowerShell/PowerShell/releases)
+
+Although this repository started as a fork of the Windows PowerShell codebase, 
+changes made in this repository are not ported back to Windows PowerShell 5.1. 
+This also means that issues tracked here are only for PowerShell 7.x and higher.
+- see version
+```
+$PSVersionTable
+```

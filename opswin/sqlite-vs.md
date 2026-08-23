@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: ".net framework 4.6"
+title: "SQLite.net is based on .NET Framework 4.6."
 description: "SQLite v1.0.112"
 date: 2026-05-07
 author: xiaobin
