@@ -73,12 +73,6 @@ Unix-like
 > Debugging With Arbitrary Record Formats
 - Structured Exception Handling (SEH)
 
-### [Upgrade MingW bundled with Clion](https://github.com/niXman/mingw-builds-binaries) - option
-把x86_64-15.2.0-release-posix-seh-ucrt-rt_v13-rev0.7z覆盖到
-```
-<CLion-HOME>\bin\mingw
-```
-
 ### Toolchain
 > Go to Settings | Build, Execution, Deployment | Toolchains and create a MinGW toolchain
 > Set the Toolset to C:\msys64\clang64. Set other paths manually in case they are not detected automatically.
