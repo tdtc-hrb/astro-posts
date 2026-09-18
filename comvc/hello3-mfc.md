@@ -38,8 +38,12 @@ property:
 ```
 #include "resource.h"
 ```
+- Add Header file required for CDialogEx
+```
+#include "afxdialogex.h"
+```
 
-## project
+## project - CMainWindow
 ![solution explorer](https://github.com/tdtc-hrb/csdn/raw/master/images/solution-hellomfc.png)
 
 - [HelloMfc.zip](https://mega.nz/file/qEl13IDA#teaFKBqYkohy6jNpMO5MmUwwGi7B0EDJE-I065K2J-E)
@@ -49,7 +53,7 @@ property:
 private:
     CButton m_btnAbout;
 ```
-- impl
+- Implemented in the constructor
 ```
     CRect rt;
     rt.top = 10;
@@ -63,6 +67,11 @@ private:
         this,
         ID_ABOUT); // #define ID_ABOUT 1101
 ```
+#### Custom Button ID
+```
+#define ID_ABOUT 1101
+```
+Define the button ID in MainWindow.cpp
 
 ### Button Event
 - Declare
@@ -79,7 +88,7 @@ afx_msg void CMainWindow::OnBtnClick()
 }
 ```
 
-### Add Message Map
+#### Add Message Map
 - Declare
 ```
 DECLARE_MESSAGE_MAP()
