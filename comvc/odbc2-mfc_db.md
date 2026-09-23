@@ -109,3 +109,4 @@ void CRec1Set::DoFieldExchange(CFieldExchange* pFX)
 ## Ref
 - [CRecordset class](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170)
 - [Record Field Exchange](https://learn.microsoft.com/en-us/cpp/mfc/reference/record-field-exchange-functions?view=msvc-170)
+- [Create a single-document project using the MFC App Wizard in VC++ 5.0/6.0](../sdi_vc56-mfc)

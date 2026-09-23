@@ -8,6 +8,7 @@ tags: ["Microsoft Foundation Class"]
 ---
 - VS 2019(v16.11)
 - Windows 1809 LTSC
+- SQL Server 2000 is deployed on Windows Server 2003 R2 running in VirtualBox
 
 ### Setting ODBC
 ![open odbc](https://github.com/tdtc-hrb/csdn/raw/master/images/odbc1-sql2k0.png)
@@ -30,6 +31,7 @@ tags: ["Microsoft Foundation Class"]
 
 ![done - odbc](https://github.com/tdtc-hrb/csdn/raw/master/images/odbc4-sql2k0.png)
 
+**Note: The ODBC driver in Windows 10 21H2 can no longer connect to SQL Server 2000.**
 ### Create SDI Application
 ![use CFormView](https://github.com/tdtc-hrb/csdn/raw/master/images/app_wizard-rec_demo.png)
 
@@ -107,4 +109,5 @@ void CMFCApplication1View::ShowRow()
 - [The List Control - MFC Controls](../serialize-n04-mfc)
 - [CRecordSet Class](../odbc2-mfc_db)
 - [CRecordView](../odbc3-mfc_db)
+- [Create a single-document project using the MFC App Wizard in VC++ 5.0/6.0](../sdi_vc56-mfc)
 - [recrodDemo.zip](https://mega.nz/file/vYUz3T6J#OvMrH2INHfRq72tGkZftlNLpHpapU0N_3Vt4h7on9fE)

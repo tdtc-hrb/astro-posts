@@ -91,3 +91,4 @@ member functions(GetDocument()) to support processing of that data.
 ## Ref
 - [CRecordView Class](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordview-class?view=msvc-170)
 - Chapter 12: Windows Programming with the Microsoft Foundation Classes (MFC) - Beginning Visual C++ 2013
+- [Create a single-document project using the MFC App Wizard in VC++ 5.0/6.0](../sdi_vc56-mfc)
