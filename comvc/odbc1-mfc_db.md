@@ -2,37 +2,46 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "ODBC1 - MFC"
 description: "Begin ODBC"
-date: 2025-12-19
+date: 2026-09-19
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-In the long run, ODBC will inevitably replace OLE DB as the mainstream driver in MS SQL Server.
+- ODBC Internal version
+- ODBC Internal Protocol
 
-1. Cross-platform
-2. similar to JDBC
+### ODBC Internal version
+|name|ver|file|
+|-|-|-|
+|Administrator|10.0.17763.1|odbccp32.dll|
+|Control Panel Startup|10.0.17763.1|odbcad32.dll|
+|Cursor Library|10.0.17763.1|odbccr32.dll|
+|Driver Manager|10.0.17763.1|odbc32.dll|
+|Localized Resource DLL|10.0.17763.1|odbcint.dll|
+|Unicode Cursor Library|10.0.17763.1|odbccu32.dll|
 
-### [SQL Server versions and ODBC and OLE DB drivers](https://learn.microsoft.com/en-us/sql/connect/connect-history?view=sql-server-ver17#sql-server-versions-and-odbc-and-ole-db-drivers)
-|SQL Server Version|ODBC Driver|OLE DB Provider|Notes|
-|-|-|-|-|
-|SQL Server 2000|SQL Server ODBC Driver (legacy)|SQL Server OLE DB Provider (legacy)|Deprecated|
-|SQL Server 2014|Microsoft ODBC Driver 11 for SQL Server|SQL Native Client 11.0 (deprecated)|SNAC/OLE DB deprecated|
-|SQL Server 2016|Microsoft ODBC Driver 13|SQL Native Client 11.0 (deprecated)|ODBC maintained OLE DB deprecated|
-|SQL Server 2017|Microsoft ODBC Driver 13.1 (14)|SQL Native Client 11.0 (deprecated)|OLE DB deprecated|
-|SQL Server 2019|Microsoft ODBC Driver 17|Microsoft OLE DB Driver (MSOLEDBSQL)|OLE DB undeprecated/reintroduced|
-|SQL Server 2022|Microsoft ODBC Driver 17|Microsoft OLE DB Driver (MSOLEDBSQL)|Actively maintained|
-|SQL Server 2025|Microsoft ODBC Driver 18|Microsoft OLE DB Driver 19 (MSOLEDBSQL19)|Actively maintained|
+## Protocol
+- TLS
+- TDS
+### tls
+When using older versions of SQL Server, TLS 1.0 must be enabled.
+```ps
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Client" -Name "Enabled" -Value 1 -Type DWord
 
-#### [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#previous-releases)
-- [ODBC 11](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#11)
-- [ODBC 13](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#13)
-- [ODBC 13.1](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#131)
-- [ODBC 17](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#17106)
-- [ODBC 18](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#187)
+Set-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.0\Server" -Name "Enabled" -Value 1 -Type DWord
+```
+from [ms](https://learn.microsoft.com/en-us/windows/win32/secauthn/tls-10-11-deprecation-in-windows)
 
-### Cross-platform
-- [Install the Microsoft ODBC driver for SQL Server (macOS)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos?view=sql-server-ver17)
-- [Install the Microsoft ODBC driver for SQL Server (Linux)](https://learn.microsoft.com/en-us/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server?view=sql-server-ver17)
+### Tabular Data Stream
+|TDS version |Associated Microsoft SQL Server release(s) |
+|-|-|
+|7.1 |SQL Server 2000 |
+|7.2 |SQL Server 2005 |
+|7.3A |SQL Server 2008 |
+|7.3B |SQL Server 2008 R2 |
+|7.4 |SQL Server 2012, 2014, 2016, 2017, 2019|
+|8.0 |SQL Server 2022 and 2025 |
 
 ## Ref
-- [Ole DB 未弃用](https://learn.microsoft.com/zh-cn/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server)
 - [SQL version compatibility](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/system-requirements-installation-and-driver-files?view=sql-server-ver17#sql-version-compatibility)
+- [SQL Server versions and ODBC and OLE DB drivers](https://learn.microsoft.com/en-us/sql/connect/connect-history?view=sql-server-ver17#sql-server-versions-and-odbc-and-ole-db-drivers)
+- [Release Notes for Microsoft ODBC Driver for SQL Server on Windows](https://learn.microsoft.com/en-us/sql/connect/odbc/windows/release-notes-odbc-sql-server-windows?view=sql-server-ver17#previous-releases)

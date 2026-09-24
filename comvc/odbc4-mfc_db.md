@@ -6,8 +6,7 @@ date: 2025-12-20
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-- VS 2019(v16.11)
-- Windows 1809 LTSC
+- ODBC: 10.0.17763.1
 - SQL Server 2000 is deployed on Windows Server 2003 R2 running in VirtualBox
 
 ### Setting ODBC
