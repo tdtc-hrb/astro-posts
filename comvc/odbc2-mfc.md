@@ -2,55 +2,33 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "ODBC2 - MFC"
 description: "Create CRecordset Class"
-date: 2025-12-20
+date: 2026-09-26
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
-- Connection String
-- Table
-- Field mapping
+### [Data Source (ODBC)](https://learn.microsoft.com/en-us/cpp/data/odbc/data-source-odbc?view=msvc-170)
+```
+public:
+	CRec1Set(CDatabase* pDatabase = NULL);
+```
+In database terms, a data source is a specific set of data, the information required to access that data, and the location of the data source, 
+which can be described using a data-source name. To work with class [CDatabase](https://learn.microsoft.com/en-us/cpp/mfc/reference/cdatabase-class?view=msvc-170), 
+the data source must be one that you have configured through Open Database Connectivity (ODBC) Administrator. 
+Examples of data sources include a remote database running on Microsoft SQL Server across a network or a Microsoft Access file in a local directory. 
+From your application, you can access any data source for which you have an ODBC driver.
 
-> Take the sales table in the pubs database as an example.
-
-#### head file
-- Include the header file in "framework.h":
+### Field
+- Declare
 ```
-#include <afxdb.h>          // ODBC
+public:
+	CStringA	m_stor_id;
+	CStringA	m_ord_num;
+	CTime		m_ord_date;
+	int			m_qty;
+	CStringA	m_payterms;
+	CStringA	m_title_id;
 ```
-- Include the header file in "Rec1Set.cpp:
-```
-#include "pch.h"
-#include "Rec1Set.h"
-```
-
-#### Class Information
-- [Difference between DECLARE_DYNAMIC and DECLARE_DYNCREATE?](https://stackoverflow.com/a/733796)
-```
-The first declares that a class has runtime type info and the second that instances can be created dynamically at runtime. 
-This is described in detail in the MSDN documentation - see links like Run-Time Object Model Services for more info.
-```
-
-### Connection String
-Use the overloaded method GetDefaultConnect().
-```
-CString CRec1Set::GetDefaultConnect()
-{
-	return _T("DSN=sql2000;UID=sa;PWD=pass2word1;DATABASE=pubs");
-}
-```
-### Table
-Use the overloaded method GetDefaultSQL().
-```
-CString CRec1Set::GetDefaultSQL()
-{
-	return _T("[dbo].[sales]");
-}
-```
-
-## Field mapping
 - Initial
-- Record Field Exchange
-### Initial
 ```
 CRec1Set::CRec1Set1Set(CDatabase* pdb)
 	: CRecordset(pdb)
@@ -65,31 +43,27 @@ CRec1Set::CRec1Set1Set(CDatabase* pdb)
 	m_nDefaultType = dynaset;
 }
 ```
-#### [snapshot vs dynaset](https://stackoverflow.com/a/9488266)
-Always depends on the datasource, in most cases "snapshot" is faster because 
-this gives you a read-only view of the data without the indexes coming it to effect. 
-On a "dynaset" Access needs to read the indexes in order to determine how to publish updates if you make any changes to the data. 
-If your user is able to add new records in this view then "snapshot" will not be available to you.
 
-#### Database
+## handling
+invoke overloaded method:
+- GetDefaultConnect()
+- GetDefaultSQL()
+- DoFieldExchange()
+### Connection String
 ```
-public:
-	CRec1Set(CDatabase* pDatabase = NULL);
+CString CRec1Set::GetDefaultConnect()
+{
+	return _T("DSN=sql2000;UID=sa;PWD=pass2word1;DATABASE=pubs");
+}
 ```
-#### Field
-Define class member variables.
+### Table
 ```
-public:
-	CStringA	m_stor_id;
-	CStringA	m_ord_num;
-	CTime		m_ord_date;
-	int			m_qty;
-	CStringA	m_payterms;
-	CStringA	m_title_id;
+CString CRec1Set::GetDefaultSQL()
+{
+	return _T("[dbo].[sales]");
+}
 ```
-
 ### Record Field Exchange
-Use the overloaded method DoFieldExchange().
 ```
 void CRec1Set::DoFieldExchange(CFieldExchange* pFX)
 {
@@ -110,3 +84,5 @@ void CRec1Set::DoFieldExchange(CFieldExchange* pFX)
 - [CRecordset class](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170)
 - [Record Field Exchange](https://learn.microsoft.com/en-us/cpp/mfc/reference/record-field-exchange-functions?view=msvc-170)
 - [Create a single-document project using the MFC App Wizard in VC++ 5.0/6.0](../sdi_vc56-mfc)
+- [Difference between DECLARE_DYNAMIC and DECLARE_DYNCREATE?](https://stackoverflow.com/a/733796)
+- [snapshot vs dynaset](https://stackoverflow.com/a/9488266)
