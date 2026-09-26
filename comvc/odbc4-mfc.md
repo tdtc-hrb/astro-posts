@@ -44,47 +44,6 @@ tags: ["Microsoft Foundation Class"]
 - Prev
 - Last
 
-#### First
-```
-void CMFCApplication1View::OnBnClickedButton1()
-{
-	// TODO: Add your control notification handler code here
-	m_pSet->MoveFirst();
-	ShowRow();
-}
-```
-#### Next
-```
-void CMFCApplication1View::OnBnClickedButton3()
-{
-	// TODO: Add your control notification handler code here
-	if (!m_pSet->IsEOF()) {
-		m_pSet->MoveNext();
-		ShowRow();
-	}
-}
-```
-#### Prev
-```
-void CMFCApplication1View::OnBnClickedButton4()
-{
-	// TODO: Add your control notification handler code here
-	if ( !m_pSet->IsBOF()) {
-		m_pSet->MovePrev();
-		ShowRow();
-	}
-}
-```
-#### Last
-```
-void CMFCApplication1View::OnBnClickedButton2()
-{
-	// TODO: Add your control notification handler code here
-	m_pSet->MoveLast();
-	ShowRow();
-}
-```
-
 ### show data
 ```
 void CMFCApplication1View::ShowRow()
