@@ -44,7 +44,8 @@ tags: ["Microsoft Foundation Class"]
 - [Prev](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170#moveprev)
 - [Last](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170#movelast)
 
-### show data
+#### show data
+After positioning the recordset, display the data for the current row:
 ```
 void CMFCApplication1View::ShowRow()
 {
