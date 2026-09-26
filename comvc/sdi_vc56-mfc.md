@@ -72,4 +72,3 @@ SquaresView
 
 ## Ref
 - Chapter 7: MFC's Document/View Architecture - MFC Internals
-- [Create a single-document project using the MFC App Wizard in VC++ 12.0 (Visual Studio 2013)](https://www.cnblogs.com/xiaobin-hlj80/p/19191031)
