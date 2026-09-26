@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Create a single-document project using the MFC App Wizard in VC++ 5.0/6.0"
 description: "Using VC 5.0/6.0"
-date: 2025-11-18
+date: 2026-09-18
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
@@ -25,6 +25,20 @@ and the view so that they do not get too dependent on each other.
 ### class diagram
 ![Figure 12-3](https://github.com/tdtc-hrb/csdn/raw/master/images/figure12.3-vc12.png)
 Image source: Beginning Visual C++ 2013
+
+### Document/View
+A document is a collection of data in your application with which the user interacts.
+
+Although the word document seems to imply something of a textual nature, it isn’t limited to text. 
+It could be data for a game, a geometric model, a text file, or, indeed, anything you want.
+
+The term document is just a convenient label for the application data in your program, treated as a unit.
+
+#### object diagram
+uses dashed arrows to show how pointers are used to relate objects. These pointers 
+enable function members of one object to access the public data or function members in the interface of another object.
+
+![Figure 12-2](https://github.com/tdtc-hrb/csdn/raw/master/images/figure12.2-vc12.png)
 
 ## project
 ```
