@@ -6,12 +6,10 @@ date: 2026-09-24
 author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
+- **NOTE: The database wizard is no longer provided in VS2017 and later versions.**
+
 ![application wizard - step6](https://github.com/tdtc-hrb/csdn/raw/master/images/mfc_app_wizard6c-vc12.png)
-
 (Figure: Step 6 of the MFC Application Wizard in Visual Studio 2013)
-
-**NOTE: The database wizard is no longer provided in VS2017 and later versions.**
-
 ### operation data
 ```
 // CMFCApplication1View database support

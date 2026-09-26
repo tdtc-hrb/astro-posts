@@ -39,10 +39,10 @@ tags: ["Microsoft Foundation Class"]
 ![add control variable](https://github.com/tdtc-hrb/csdn/raw/master/images/add_variable-rec_demo.png)
 
 ### data move
-- First
-- Next
-- Prev
-- Last
+- [First](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170#movefirst)
+- [Next](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170#movenext)
+- [Prev](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170#moveprev)
+- [Last](https://learn.microsoft.com/en-us/cpp/mfc/reference/crecordset-class?view=msvc-170#movelast)
 
 ### show data
 ```
