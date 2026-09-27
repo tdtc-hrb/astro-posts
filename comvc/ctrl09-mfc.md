@@ -63,5 +63,7 @@ error C2664: 'void DDX_Control(CDataExchange *,int,CWnd &)' : cannot convert arg
 ```
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [List Box](https://www.functionx.com/visualc/controls/listbox.htm)
 - [addVarDemo.zip](https://mega.nz/file/SZ0SVTiA#013V7bSmIZ9zaOm8MjREH3cqtxF1QCozj2kRJ75xd94)

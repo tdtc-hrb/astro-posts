@@ -100,4 +100,6 @@ CAllControlsSheet::CAllControlsSheet(LPCTSTR pszCaption, CWnd* pParentWnd, UINT 
 ```
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [example: MFC/general/CmnCtrl1](https://github.com/microsoft/VCSamples/tree/master/VC2010Samples/MFC/general/CmnCtrl1)

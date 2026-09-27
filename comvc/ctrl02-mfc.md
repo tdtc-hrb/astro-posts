@@ -49,6 +49,8 @@ void CSerialCommView::OnInitialUpdate()
 ```
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [AddString()](https://learn.microsoft.com/en-us/cpp/mfc/reference/ccombobox-class?view=msvc-170#example)
 - [GetCurSel()](https://learn.microsoft.com/en-us/cpp/mfc/reference/ccombobox-class?view=msvc-170#getcursel)
 - [GetLBText()](https://learn.microsoft.com/en-us/cpp/mfc/reference/ccombobox-class?view=msvc-170#getlbtext)

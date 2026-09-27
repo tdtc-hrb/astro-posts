@@ -52,5 +52,7 @@ void CMFCApplication1Dlg::OnLvnColumnclickList2(NMHDR *pNMHDR, LRESULT *pResult)
 ```
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [CListCtrl and sorting rows](https://www.codeproject.com/articles/CListCtrl-and-sorting-rows)
 - [ObjArraySerialDemo2.1.zip](https://mega.nz/file/mYcVzBiB#dHC3dYMfYALxM3qVtyRhHaylpEhjQJQH0h-07qWxNFg)

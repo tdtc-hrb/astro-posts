@@ -7,11 +7,11 @@ author: xiaobin
 tags: ["Microsoft Foundation Class"]
 ---
 The project requires the following articles:
-- [Serialization class](https://tdtc-hrb.github.io/com-vc/posts/serialize-n01-mfc)
-- [Constructors and member initializer lists](https://tdtc-hrb.github.io/com-vc/posts/serialize-n02-mfc)
-- [ListBox and Edit Control](https://tdtc-hrb.github.io/com-vc/posts/ctrl09-mfc)
-- [Collection Serialization](https://tdtc-hrb.github.io/com-vc/posts/serialize-n03-mfc)
-- [List Control - Report View](https://tdtc-hrb.github.io/com-vc/posts/serialize-n04-mfc)
+- [Serialization class](../serialize-n01-mfc)
+- [Constructors and member initializer lists](../serialize-n02-mfc)
+- [ListBox and Edit Control](../ctrl09-mfc)
+- [Collection Serialization](../serialize-n03-mfc)
+- [List Control - Report View](../serialize-n04-mfc)
 
 ### Opening a List
 ```

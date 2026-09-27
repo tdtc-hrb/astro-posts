@@ -69,6 +69,9 @@ void CMFCApplication1Dlg::SetGridView()
 
 ## Ref
 - [How to add items to a List Control in an MFC dialog](https://stackoverflow.com/a/18802485)
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
+- [MFC Controls: The List Control](https://www.functionx.com/visualc/controls/listcontrol.htm)
 - [InsertColumn()](https://learn.microsoft.com/en-us/cpp/mfc/reference/clistctrl-class?view=msvc-170#insertcolumn)
 - [InsertItem()](https://learn.microsoft.com/en-us/cpp/mfc/reference/clistctrl-class?view=msvc-170#insertitem)
 - [SetItemText()](https://learn.microsoft.com/en-us/cpp/mfc/reference/clistctrl-class?view=msvc-170#setitemtext)

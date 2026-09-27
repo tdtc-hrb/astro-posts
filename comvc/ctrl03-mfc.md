@@ -91,3 +91,7 @@ for (int i = 0; i < 20; i++)
     ((CComboBox*)GetDlgItem(IDC_COMBO1))->AddString(str);
 }
 ```
+
+## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)

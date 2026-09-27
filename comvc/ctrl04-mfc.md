@@ -52,5 +52,7 @@ Add the following between
 - src: [CMFCTabCtrlDemo.zip - vs2013](https://mega.nz/file/7BN0WD4R#zDxossI9goWoMRFNjaT7LLr_cAOqFufVRLY_5XgkvyM)
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [CMFCTabCtrl not visible in CDialog](https://stackoverflow.com/questions/16455701/cmfctabctrl-not-visible-in-cdialog)
 - [CMFCTabCtrl - example](https://github.com/microsoft/VCSamples/tree/master/VC2010Samples/MFC/Visual%20C%2B%2B%202008%20Feature%20Pack/TabControl)

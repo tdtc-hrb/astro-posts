@@ -167,3 +167,5 @@ BOOL CMFCApplication1Dlg::AddItem(int nIndex)
 - 10.4.3. Sorting in a List View(P649)- Programming Windows With MFC
 - [CD-ROM Jeff Prosise MFC 2nd Edition.zip](https://github.com/definedrisk/prosise-mfc2e)
 - [ObjArraySerialDemo2.zip](https://mega.nz/file/uYd0GRjY#6nv3hnMd2PdQg4PDaLGI_xR7DHqxow4u2BsbGKJFCoY)
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)

@@ -110,4 +110,6 @@ DWORD CALLBACK CSerialCommView::MyStreamOutCallback(DWORD dwCookie, LPBYTE pbBuf
 ```
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [Windows Controls: The Rich Edit Control](https://www.functionx.com/visualc/controls/richedit.htm)

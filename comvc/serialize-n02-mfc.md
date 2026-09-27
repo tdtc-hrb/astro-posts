@@ -93,7 +93,7 @@ int main()
 }
 ```
 
-### [ConnectString - MFC Class](https://tdtc-hrb.github.io/com-vc/posts/serialize-n01-mfc)
+### [ConnectString - MFC Class](../serialize-n01-mfc)
 - No parameter
 ```
 CConnectString();

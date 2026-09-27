@@ -46,4 +46,6 @@ friend class CPropertySheet;
 ```
 
 ## Ref
+- [Introduction to Windows Controls](https://www.functionx.com/visualc/controls/initroduction.htm)
+- [Managing Windows Controls](https://www.functionx.com/visualc/controls/managing.htm)
 - [CMFCPropertySheet class](https://learn.microsoft.com/en-us/cpp/mfc/reference/cmfcpropertysheet-class?view=msvc-170)
