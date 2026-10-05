@@ -1,0 +1,67 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: "set - C++"
+description: "C++98 standard"
+date: 2026-03-16
+author: xiaobin
+tags: ["C++ standard"]
+---
+- IDE: [CLion 2025.3.3](https://www.jetbrains.com.cn/en-us/clion/)
+
+```
+#include <algorithm>
+#include <iomanip>
+#include <iostream>
+#include <iterator>
+#include <set>
+#include <string_view>
+
+template<typename T>
+std::ostream& operator<<(std::ostream& out, const std::set<T>& set)
+{
+    if (set.empty())
+        return out << "{}";
+    out << "{ " << *set.begin();
+    std::for_each(std::next(set.begin()), set.end(), [&out](const T& element)
+    {
+        out << ", " << element;
+    });
+    return out << " }";
+}
+
+int main()
+{
+    std::set<int> set{1, 5, 3};
+    std::cout << set << '\n';
+
+    set.insert(2);
+    std::cout << set << '\n';
+
+    set.erase(1);
+    std::cout << set << "\n\n";
+
+    // Was the insertion successful?
+    if ( set.insert(3).second == false )
+        std::cout << "no insertion" << '\n';
+
+    std::set<int> keys{3, 4};
+    for (int key : keys)
+    {
+        if (set.contains(key))
+            std::cout << set << " does contain " << key << '\n';
+        else
+            std::cout << set << " doesn't contain " << key << '\n';
+    }
+    std::cout << '\n';
+
+    std::string_view word = "element";
+    std::set<char> characters(word.begin(), word.end());
+    std::cout << "There are " << characters.size() << " unique characters in "
+              << std::quoted(word) << ":\n" << characters << '\n';
+}
+```
+
+## Ref
+- [std::set](https://en.cppreference.com/w/cpp/container/set.html)
+- [insert - set](https://en.cppreference.com/w/cpp/container/set/insert.html)
+- [std::pair](https://en.cppreference.com/w/cpp/utility/pair.html)
