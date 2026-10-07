@@ -36,7 +36,7 @@ site2.css:
 ```
 npx @tailwindcss/cli -i ./wwwroot/css/site2.css -o ./wwwroot/css/site2tw.css --optimize
 ```
-also see [tailwind-integrated](https://tdtc-hrb.github.io/css-tws/posts/tailwind-integrated/)
+also see [tailwind-integrated](../tailwind-integrated)
 
 注意：使用v4的cli现在解析v2的配置文件(tailwind.config.js)有问题!
 

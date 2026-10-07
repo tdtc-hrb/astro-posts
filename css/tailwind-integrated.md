@@ -7,7 +7,7 @@ author: "tdtc"
 ---
 - install
 ```
-cd veic-web_asp
+cd veic-web-tws
 npm init -y
 npm install tailwindcss @tailwindcss/cli
 ```

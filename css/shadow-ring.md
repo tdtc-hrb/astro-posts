@@ -36,4 +36,4 @@ author: "tdtc"
 
 
 - [focus ring - bs](https://getbootstrap.com/docs/5.3/helpers/focus-ring)
-- [box shadow - tws](https://tdtc-hrb.github.io/css-tws/posts/tailwind-box-shadow)
+- [box shadow - tws](../tailwind-box-shadow)
