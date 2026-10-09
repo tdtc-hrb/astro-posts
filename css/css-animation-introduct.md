@@ -30,7 +30,7 @@ for example:
 animation: myanimation 20s linear infinite;
 ```
 
-## [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function)
+## transform function
 ```
 	<div class="marquee">
 		<p>Hello CSS</p>
@@ -108,3 +108,4 @@ animation-timing-function: linear;
 ## Ref
 - [The Complete CSS Animations Tutorial](https://www.lambdatest.com/blog/css-animations-tutorial)
 - [Animate elements on scroll with Scroll-driven animations](https://developer.chrome.com/docs/css-ui/scroll-driven-animations)
+- [transform function](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function)

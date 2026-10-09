@@ -2,10 +2,11 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "marquee class"
 description: "替代 marquee 元素 - HTML"
-date: 2025-03-12
+date: 2026-10-09
 author: "tdtc"
 ---
-
+When using Tailwind v4, if you want the styles pre-generated so you can just write animate-marquee as a class, 
+we need to include the keyframe within the @theme config.
 ## input file
 site2.css:
 ```
@@ -38,67 +39,7 @@ npx @tailwindcss/cli -i ./wwwroot/css/site2.css -o ./wwwroot/css/site2tw.css --o
 ```
 also see [tailwind-integrated](../tailwind-integrated)
 
-注意：使用v4的cli现在解析v2的配置文件(tailwind.config.js)有问题!
-
-## CSS without frameworks
-```
-        .marquee {
-            height: 50px;
-            overflow: hidden;
-            position: relative;
-            background: #fefefe;
-            color: #333;
-            border: 1px solid #4a4a4a;
-        }
-        
-        .marquee p {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            margin: 0;
-            line-height: 50px;
-            text-align: center;
-            -moz-transform: translateX(100%);
-            -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-            -moz-animation: scroll-left 2s linear infinite;
-            -webkit-animation: scroll-left 2s linear infinite;
-            animation: scroll-left 20s linear infinite;
-        }
-        
-        @-moz-keyframes scroll-left {
-            0% {
-                -moz-transform: translateX(100%);
-            }
-            100% {
-                -moz-transform: translateX(-100%);
-            }
-        }
-        
-        @-webkit-keyframes scroll-left {
-            0% {
-                -webkit-transform: translateX(100%);
-            }
-            100% {
-                -webkit-transform: translateX(-100%);
-            }
-        }
-        
-        @keyframes scroll-left {
-            0% {
-                -moz-transform: translateX(100%);
-                -webkit-transform: translateX(100%);
-                transform: translateX(100%);
-            }
-            100% {
-                -moz-transform: translateX(-100%);
-                -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
-            }
-        }
-```
-
 ## Ref
 - [Defining animation keyframes - format](https://tailwindcss.com/docs/theme#defining-animation-keyframes)
 - [Default theme variable reference- multiple keys](https://tailwindcss.com/docs/theme#default-theme-variable-reference)
-- [Creating a Marquee with Tailwind CSS - v2](https://jackwhiting.co.uk/posts/creating-a-marquee-with-tailwind-css)
+- [Creating a Marquee with Tailwind CSS - v4](https://jackwhiting.co.uk/posts/creating-a-marquee-with-tailwind-css-v4)
