@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: "已弃用 - html"
+title: "已弃用 elements - html 5"
 description: "This feature is no longer recommended."
 date: 2025-03-12
 author: "tdtc"
