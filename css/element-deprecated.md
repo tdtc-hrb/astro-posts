@@ -2,21 +2,15 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "已弃用 elements - html 5"
 description: "This feature is no longer recommended."
-date: 2025-03-12
+date: 2026-10-12
 author: "tdtc"
 ---
-Deprecated: This feature is no longer recommended. 
-Though some browsers might still support it, 
-it may have already been removed from the relevant web standards, 
-may be in the process of being dropped, or may only be kept for compatibility purposes. 
-Avoid using it, and update existing code if possible; 
-see the compatibility table at the bottom of this page to guide your decision. 
-Be aware that this feature may cease to work at any time.
-
-- Frequently used elements
-- Frame and other
-- Object related elements
-
+- font
+- center
+- strike
+```
+<s>
+```
 ## Frequently used elements
 下面的元素使用CSS替代:
 - [font](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/font)
@@ -65,3 +59,8 @@ other:
 - [The Directory element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dir)
 - [The Teletype Text element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/tt)
 - [xmp](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/xmp)
+
+### payment
+- [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/iframe)
+
+**Note: The iframe element is used for payment.**
